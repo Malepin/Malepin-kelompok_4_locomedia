@@ -42,7 +42,7 @@ h1{
     margin-left: 340px;
 }
 
-.carousel-inner .carousel-item{
+.carousel-inner .carousel-item .cards{
     display: flex;
     text-align: center;
     margin-left: 150px;
