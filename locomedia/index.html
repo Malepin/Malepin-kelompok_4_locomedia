@@ -16,11 +16,71 @@
             <img src="logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center">
             <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
           </a>
-          <form class="d-flex">
-            <a class="btn btn-outline-primary" href="#" role="button" style="border-color: black; color: black;">Sign in</a>
-            &nbsp &nbsp &nbsp
-            <a class="btn btn-outline-primary" href="#" role="button" style="border-color: black; color: black;">Login</a>
-          </form>
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: solid; margin-right: -800px;">
+            Log in
+          </button>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Hello</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                  </div>                
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary">Enter</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: solid;">
+            Sign in
+          </button>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Hello</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3 row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                  </div>
+                  <div class="mb-3 row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword">
+                    </div>
+                  </div>                
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-primary">Sign in</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -57,18 +117,13 @@
             </a>
           </div>
         </nav>
-      
       </div>
 
       <div class="search-bar">
-        <div class="wrapper">
-          <img src="newDestination/indonesia.jpg" class="img-fluid">
-          <div class="search-wrapper">
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Where To" aria-label="Search" style="text-align: center;">
-            </form>
-          </div>
-        </div>
+        <img src="newDestination/indonesia.jpg" class="img-fluid" alt="...">
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Where To" aria-label="Search" style="width: 500px; text-align: center;">
+        </form>
       </div>
 
       <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" style="margin-bottom: 60px;">
@@ -156,6 +211,6 @@
 
     
       
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
 </html>
