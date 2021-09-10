@@ -5,12 +5,16 @@ h1{
 .link-container{
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 195px;
+    margin-left: 321px;
     display: flex;
 }
 
+.link-container a {
+    margin-right: 0;
+}
+
 .link-container nav {
-    margin-right: 200px;
+    margin-right: 321px;
 }
 
 .search-bar {
@@ -23,7 +27,7 @@ h1{
 
 .search-bar form {
     margin-top: -190px;
-    margin-left: 280px;
+    margin-left: 270px;
 }
 
 .search-bar img {
