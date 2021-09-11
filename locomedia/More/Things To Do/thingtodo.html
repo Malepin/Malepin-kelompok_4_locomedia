@@ -11,19 +11,79 @@
     <title>Things To Do</title>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#" style="display: flex; align-items: center;">
-            <img src="/locomedia/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center">
-            <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
-          </a>
-          <form class="d-flex">
-            <a class="btn btn-outline-primary" href="#" role="button" style="border-color: black; color: black;">Sign in</a>
-            &nbsp &nbsp &nbsp
-            <a class="btn btn-outline-primary" href="#" role="button" style="border-color: black; color: black;">Login</a>
-          </form>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" style="display: flex; align-items: center;">
+        <img src="logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center">
+        <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+      </a>
+      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: solid; margin-right: -800px;">
+        Log in
+      </button>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Hello</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword">
+                </div>
+              </div>                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Enter</button>
+            </div>
+          </div>
         </div>
-      </nav>
+      </div>
+
+      <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: solid;">
+        Sign in
+      </button>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Hello</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+              </div>
+              <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword">
+                </div>
+              </div>                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Sign in</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
       
     <h1 style="margin-left: 100px;">
         <p>Top 10 things to do in Indonesia</p>
