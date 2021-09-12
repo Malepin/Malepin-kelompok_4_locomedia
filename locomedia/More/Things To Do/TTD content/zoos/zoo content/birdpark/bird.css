@@ -1,0 +1,43 @@
+h1 {
+    text-align: left;
+    margin: 10px;
+}
+
+#about {
+    background-color: white;
+    border-style: solid;
+    border-radius: 15px;
+    margin: -54.5% 80% 10px 10px;
+    padding: 10px;
+}
+
+#ticket {
+    background-color: white;
+    border-style: solid;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 1% 26% 0px 21.5%;
+    
+}
+
+#more {
+    display: none;
+}
+
+#myBtn {
+    background-color: white;
+    border-style: none;
+    text-decoration: underline;
+}
+
+#myBtn:hover {
+    color: grey;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#vid {
+    margin: 0px 0px 0px 325px;
+    border-radius: 15px;
+    position:inherit;
+}
