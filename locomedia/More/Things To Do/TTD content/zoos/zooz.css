@@ -1,0 +1,40 @@
+.title {
+    text-align: left;
+    margin-left: 15%;
+}
+
+#frontimg {
+    width: 300px;
+    height: 200px;
+    margin: 50px 0px 0px 100px;
+}
+
+li {
+    margin: -200px 0px 150px 450px;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+p {
+    font-size: 80%;
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: grey;
+    background-color: transparent;
+    text-decoration: underline;
+}
+  
+
