@@ -1,0 +1,14 @@
+.carousel-inner .carousel-item .cards{
+    display: flex;
+    text-align: center;
+    margin-left: 150px;
+}
+
+.carousel-inner .carousel-item .card{
+    margin-right: 50px;
+}
+
+.carousel-inner .carousel-item .card img{
+    height: 200px;
+    width: auto;
+}

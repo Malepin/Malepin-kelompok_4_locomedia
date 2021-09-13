@@ -62,12 +62,3 @@ h1{
     width: 200px;
     height: 200px;
 }
-
-.card-container{
-    display: flex;
-}
-
-.card-container .card img{
-    width: 287px;
-    height: 200px;
-}
