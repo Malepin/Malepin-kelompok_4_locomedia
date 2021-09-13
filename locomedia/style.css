@@ -5,16 +5,13 @@ h1{
 .link-container{
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-left: 280px;
     display: flex;
-}
-
-.link-container a {
-    margin-right: 0;
+    justify-content: center;
 }
 
 .link-container nav {
-    margin-right: 100px;
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 .search-bar {
