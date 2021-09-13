@@ -17,10 +17,8 @@ body {
     
 }
 
-.carousel-inner .carousel-item {
-    width: 80%;
-}
 
-.carousel-inner .carousel-item .img{
-    justify-content: center;
+.carousel-inner .carousel-item .d-block {
+    height: 400px;
+    
 }
