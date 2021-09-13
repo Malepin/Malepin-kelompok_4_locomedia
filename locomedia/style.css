@@ -24,7 +24,7 @@ h1{
 
 .search-bar form {
     margin-top: -190px;
-    margin-left: 270px;
+    justify-content: center;
 }
 
 .search-bar img {
