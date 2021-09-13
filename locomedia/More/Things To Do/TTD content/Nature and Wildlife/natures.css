@@ -1,0 +1,99 @@
+.maintitle {
+    margin: 15px;
+}
+
+.maincontainer {
+    margin:  15px 15px 25px 15px;
+    display: flex;
+}
+
+.wildlife {
+    border: dotted grey;
+    border-radius: 15px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 10px;
+    display: block;
+    max-width: 50%;
+}
+
+.nature {
+    border: dotted grey;
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-left: none;
+    padding: 10px;
+    display: block;
+    max-width: 50%;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 15px;
+    border: solid;
+}
+
+.column img {
+    width: 200px;
+    height: 125px;
+    float: left;
+    margin: 2px;
+    border-radius: 15px;
+}
+
+.row {
+    margin: 5px;
+    overflow-y: scroll;
+    display: block;
+    flex-direction: column;
+    max-height: 513px;
+    
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text {
+    margin-left: 32%;
+    text-align: left;
+    padding: 5px;
+    max-height: 10px;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.rating img{
+    margin-top: -8px;
+    height: 28px;
+    width: 125px;
+    
+}
+
+@media screen and (max-width:1500px) {
+    .column {
+      width: 100%;
+    }
+    .text {
+        margin: 5px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .column {
+      width: 100%;
+    }
+    .text {
+        margin-left: 0%;
+        padding: 10px;
+    }
+}
