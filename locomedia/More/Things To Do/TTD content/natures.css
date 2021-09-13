@@ -1,8 +1,9 @@
-.carousel-inner .carousel-item  .d-block {
-    height: 400px;
+.carousel-inner .carousel-item .content{
+    display: flex;
+    justify-content: center;
 }
 
-.carousel-inner .carousel-item {
-    width: 80%;
-    
+.carousel-inner .carousel-item .content img{
+    height: 276px;
+    width: 276px;
 }
