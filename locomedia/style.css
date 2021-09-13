@@ -39,9 +39,6 @@ h1{
 }
 
 .carousel-inner .carousel-item .cards3 .card{
-    display: flex;
-    text-align: center;
-    justify-content: center;
     margin-left: 25px;
     margin-right: 25px;
 }
@@ -50,13 +47,9 @@ h1{
     display: flex;
     text-align: center;
     justify-content: center;
-    
 }
 
 .carousel-inner .carousel-item .cards2 .card{
-    display: flex;
-    text-align: center;
-    justify-content: center;
     margin-left: 25px;
     margin-right: 25px;
 }
