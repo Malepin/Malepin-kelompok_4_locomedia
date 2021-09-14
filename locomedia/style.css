@@ -32,6 +32,14 @@
     display: flex;
 }
 
+.main-island .body .text{
+    flex-basis: 30%;
+}
+
+.main-island .body .carousel-inner{
+    flex-basis: auto;
+}
+
 .main-island .body .carousel-inner .carousel-item .cards3{
     display: flex;
     text-align: center;
