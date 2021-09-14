@@ -5,27 +5,25 @@
 .maincontainer {
     margin:  15px 15px 25px 15px;
     display: flex;
+    justify-content: space-evenly;
 }
 
 .wildlife {
     border: dotted grey;
     border-radius: 15px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
     padding: 10px;
     display: block;
-    max-width: 50%;
+    max-width: 45%;
+    
 }
 
 .nature {
     border: dotted grey;
     border-radius: 15px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-left: none;
     padding: 10px;
     display: block;
-    max-width: 50%;
+    max-width: 45%;
+    
 }
 
 .column {
