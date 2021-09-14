@@ -8,16 +8,7 @@
     justify-content: space-evenly;
 }
 
-.wildlife {
-    border: dotted grey;
-    border-radius: 15px;
-    padding: 10px;
-    display: block;
-    max-width: 45%;
-    
-}
-
-.nature {
+.naw {
     border: dotted grey;
     border-radius: 15px;
     padding: 10px;
