@@ -8,22 +8,12 @@
     justify-content: space-evenly;
 }
 
-.wildlife {
+.fun {
     border: dotted grey;
     border-radius: 15px;
     padding: 10px;
     display: block;
-    max-width: 45%;
-    
-}
-
-.nature {
-    border: dotted grey;
-    border-radius: 15px;
-    padding: 10px;
-    display: block;
-    max-width: 45%;
-    
+    max-width: 45%; 
 }
 
 .column {
