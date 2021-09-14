@@ -6,13 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
-.city {
-  color: white;
-  border: 2px solid black;
-  margin: 30px;
-  padding: 20px;
+.container {
+  position: relative;
   text-align: center;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
 }
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img{
+  
+  border-radius: 25px 25px;
+}
+
+
+
+
+
+
 </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
@@ -31,26 +51,44 @@
           </form>
         </div>
       </nav>
+
       <h1 style="text-align: center;font-size: 60px;font-family: 'Times New Roman'; ">Kalimantan</h1>
-      <div class="city">
-        <h2 style="color: black;">Kalimantan Selatan</h2>
-        </div> 
-        
-        <div class="city">
-        <h2 style="color: black;">Kalimantan Utara</h2>
-        </div>
-        
-        <div class="city">
-        <h2 style="color: black;">Kalimantan Timur</h2>
-        </div>
-        
-        <div class="city">
-            <h2 style="color: black;">Kalimantan Barat</h2>
-            </div>
-        
-        <div class="city">
-            <h2 style="color: black;">Kalimantan Tengah</h2>
-            </div>
+
+      <div class="container">
+        <a href="folder kalteng">
+          <img src="img/kalimantan/kalimantan tengah/kalimantantengah.jpg" width="800" height="300">
+          </a>
+        <div class="centered"> Kalimantan Tengah</div>
+      </div>
+
+      <div class="container">
+        <a href="folder kalbar">
+          <img src="img/kalimantan/kalimantan barat/kalimantanbarat.jpg" width="800" height="300">
+          </a>
+        <div class="centered"> Kalimantan Barat</div>
+      </div>
+
+      <div class="container">
+        <a href="folder kalsel">
+          <img src="img/kalimantan/kalimantan selatan/pasar terapung.jpg" width="800" height="300">
+          </a>
+        <div class="centered"> Kalimantan Selatan</div>
+      </div>
+
+      <div class="container">
+        <a href="folder kaltim">
+          <img src="img/kalimantan/kalimantan timur/kaltim.jpg" width="800" height="300">
+          </a>
+        <div class="centered"> Kalimantan Timur</div>
+      </div>
+
+      <div class="container">
+        <a href="folder kalut">
+          <img src="img/kalimantan/kalimantan utara/kalut.jpg" width="800" height="300">
+          </a>
+        <div class="centered"> Kalimantan Utara</div>
+      </div>
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
