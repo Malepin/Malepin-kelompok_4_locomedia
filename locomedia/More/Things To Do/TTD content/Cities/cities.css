@@ -3,10 +3,10 @@
 }
 
 .maincontainer {
-    margin:  15px 15px 25px 15px;
+    margin:  15px 50px 25px 50px;
 }
 
-.shop {
+.cities {
     border: dotted grey;
     border-radius: 15px;
     padding: 10px;
