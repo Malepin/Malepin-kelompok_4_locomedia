@@ -1,0 +1,37 @@
+.maintitle {
+    margin: 15px;
+}
+
+.maincontainer {
+    border: solid red;
+    margin:  15px 15px 25px 15px;
+}
+
+.column {
+    float: left;
+    width: 100%;
+    padding: 15px;
+}
+
+.column img {
+    width: 200px;
+    height: 125px;
+    float: left;
+    margin: 2px;
+    border-radius: 15px;
+}
+
+.content {
+    border: dotted blue;
+    border-radius: 15px;
+    padding: 10px;
+    display: block;
+    max-width: 45%; 
+}
+
+.rating img{
+    margin-top: -8px;
+    height: 28px;
+    width: 125px;
+    
+}
