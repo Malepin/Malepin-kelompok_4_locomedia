@@ -43,6 +43,7 @@
 .main-island .body .carousel-inner .carousel-item .cards3{
     display: flex;
     text-align: center;
+    justify-content: center;
 }
 
 .main-island .body .carousel-inner .carousel-item .cards3 .card{
@@ -77,4 +78,34 @@
 .moretoexplore .body .card img{
     height: 233px;
     width: 366px;
+}
+
+.line2 {
+	margin:0 0 1em;
+	color:#F00;
+	text-shadow:1px 1px 1px #000;
+	font-size:1.5em;
+	text-align:center;
+  display:flex;
+  align-items:center;
+}
+
+.line2:before,.line2:after {
+	content:" ";
+  flex:1 0 0%;
+	height:2px;
+	background:rgba(0,0,0,0.8);
+  margin:0 1.5rem 0 0;
+}
+
+.line2:after {
+  margin:0 0 0 1.5rem;
+}
+
+.sponsor .body .credit .image {
+    display: flex;
+}
+
+.sponsor .body .credit .image img{
+    width: 20px;
 }
