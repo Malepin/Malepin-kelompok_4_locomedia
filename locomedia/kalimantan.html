@@ -5,15 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 <style>
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-  margin: 10px;
-  padding: 10px;
-  font-size: xx-large;
-  font-family: 'Times New Roman', Times, serif;
+.body {
+    display: flex;
+}
+
+.body .text{
+    flex-basis: 60%;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 30px;
+  left: 150px;
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 30px;
+  right: 150px;
 }
 
 .centered {
@@ -23,15 +34,11 @@
   transform: translate(-50%, -50%);
 }
 
-img{
-  
-  border-radius: 25px 25px;
+.container {
+  position: relative;
+  text-align: center;
+  color: black;
 }
-
-
-
-
-
 
 </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -52,43 +59,64 @@ img{
         </div>
       </nav>
 
+
       <h1 style="text-align: center;font-size: 60px;font-family: 'Times New Roman'; ">Kalimantan</h1>
 
-      <div class="container">
-        <a href="folder kalteng">
-          <img src="img/kalimantan/kalimantan tengah/kalimantantengah.jpg" width="800" height="300">
-          </a>
-        <div class="centered"> Kalimantan Tengah</div>
-      </div>
+      <h2>Kalimantan Tengah</h2>
 
-      <div class="container">
-        <a href="folder kalbar">
-          <img src="img/kalimantan/kalimantan barat/kalimantanbarat.jpg" width="800" height="300">
-          </a>
-        <div class="centered"> Kalimantan Barat</div>
-      </div>
+      <div class="body">
 
-      <div class="container">
-        <a href="folder kalsel">
-          <img src="img/kalimantan/kalimantan selatan/pasar terapung.jpg" width="800" height="300">
-          </a>
-        <div class="centered"> Kalimantan Selatan</div>
-      </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+  
+          
+            
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/kalimantan/kalimantan tengah/kalteng2.jpg" class="d-block" style="width:400px ; height: 300px" >
+            </div>
+            <div class="carousel-item">
+              <img src="img/kalimantan/kalimantan tengah/kalteng1.jpg" class="d-block" style="width:400px ; height: 300px">
+            </div>
+            <div class="carousel-item">
+              <img src="img/kalimantan/kalimantan tengah/kalimantantengah.jpg" class="d-block" style="width:400px ; height: 300px">
+            </div>
+          </div>
+  
+          
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
 
-      <div class="container">
-        <a href="folder kaltim">
-          <img src="img/kalimantan/kalimantan timur/kaltim.jpg" width="800" height="300">
-          </a>
-        <div class="centered"> Kalimantan Timur</div>
-      </div>
+        <div class="text">
+          <h1 style="padding: 10px; font-size:medium;">Kalimantan Tengah memiliki berbagai potensi wisata yang bila dieksplorasi dengan baik, bisa menciptakan destinasi wisata baru yang ramai dikunjungi oleh wisatawan lokal maupun mancanegara.</h1>
+<div>
+  <h1>
+    <div class="container">
+    <img src="img/kalimantan/kalimantan tengah/makanan khas kalteng lemang.jfif" style="padding: 1px;width: 100px: height: 100px; ">
+    <div class="centered"> lemang</div>
+  </div>
 
-      <div class="container">
-        <a href="folder kalut">
-          <img src="img/kalimantan/kalimantan utara/kalut.jpg" width="800" height="300">
-          </a>
-        <div class="centered"> Kalimantan Utara</div>
+    <div class="container">
+    <img src="img/kalimantan/kalimantan tengah/istana kuning.jfif" style="padding: 1px;width: 100px: height: 100px;">
+    <div class="centered"> istana kuning</div>
+  </div>
+  </h1>
+</div>
       </div>
       
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
