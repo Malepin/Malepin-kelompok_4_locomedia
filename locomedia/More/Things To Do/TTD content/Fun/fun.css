@@ -20,7 +20,6 @@
     float: left;
     width: 100%;
     padding: 15px;
-    border: solid;
 }
 
 .column img {
@@ -79,6 +78,7 @@ a {
 @media screen and (max-width:1000px) {
     .column {
       width: 100%;
+      padding-bottom: 60%;
     }
     .text {
         margin-left: 0%;
