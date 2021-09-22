@@ -69,6 +69,7 @@ a {
 @media screen and (max-width:1500px) {
     .column {
       width: 100%;
+      margin-bottom: 50px;
     }
     .text {
         margin: 5px;
@@ -79,6 +80,7 @@ a {
 @media screen and (max-width:1000px) {
     .column {
       width: 100%;
+      margin-bottom: 250px;
     }
     .text {
         margin-left: 0%;
