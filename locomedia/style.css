@@ -1,3 +1,7 @@
+.modal .modal-dialog .modal-content .header {
+    display: flex;
+}
+
 .link-container{
     margin-top: 50px;
     margin-bottom: 50px;
