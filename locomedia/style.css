@@ -1,5 +1,28 @@
-.modal .modal-dialog .modal-content .header {
-    display: flex;
+.modal .modal-dialog .modal-content .modal-body .btn {
+    margin-bottom: 20px;
+    height: 50px;
+    width: 400px;
+    font-weight: 600;
+}
+
+.modal .modal-dialog .modal-content .modal-body .btn img {
+    height: 20px;
+}
+
+.modal .modal-dialog .modal-content .modal-body a:hover {
+    cursor: pointer;
+}
+
+.modal .modal-dialog .modal-content .modal-body .line2:before, .line2:after {
+	content:" ";
+    flex:1 0 0%;
+	height:2px;
+	background:rgba(0,0,0,0.8);
+    margin:0 0 0 0;
+}
+
+.modal .modal-dialog .modal-content .modal-body .line2:after {
+    margin:0 0 0 0;
 }
 
 .link-container{
@@ -95,16 +118,16 @@
 	text-shadow:1px 1px 1px #000;
 	font-size:1.5em;
 	text-align:center;
-  display:flex;
-  align-items:center;
+    display:flex;
+    align-items:center;
 }
 
 .line2:before,.line2:after {
 	content:" ";
-  flex:1 0 0%;
+    flex:1 0 0%;
 	height:2px;
 	background:rgba(0,0,0,0.8);
-  margin:0 1.5rem 0 0;
+    margin:0 1.5rem 0 0;
 }
 
 .line2:after {
