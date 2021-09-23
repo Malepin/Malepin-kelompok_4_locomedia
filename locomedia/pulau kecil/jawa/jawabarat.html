@@ -262,42 +262,152 @@ for(var i = 1; i < q.length; i++){
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="/index.html" style="display: flex; align-items: center;">
-            <img src="/pulau kecil/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+            <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
             <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
           </a>
           <div class="button-container">
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: solid; margin-right: 25px;">
-              Log in
-            </button>
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: solid;">
-              Sign up
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
+              Sign in
             </button>
           </div>
 
           <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Hello</h5>
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <div class="mb-3 row">
-                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                    </div>
-                  </div>
-                  <div class="mb-3 row">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword">
-                    </div>
-                  </div>                
+                  <div class="d-grid gap-2 col-8 mx-auto" style="justify-content: center; margin-top: 10%; margin-bottom: 10%;">
+                    <button class="btn" type="button" style="border: solid black; border-radius: 25px;;">
+                      <img src="/icon/google.png" alt="" style="width: 20px; float: left; margin-left: 20px;">
+                      Continue With Google
+                    </button>
+                    <button class="btn" type="button" style="border: solid black; border-radius: 25px;">
+                      <img src="/icon/facebook.png" alt="" style="width: 20px; float: left; margin-left: 20px;">
+                      Continue With Facebook
+                    </button>
+                    <button class="btn" type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: solid black; border-radius: 25px;">
+                      <img src="/icon/mail_outline_black_24dp.svg" alt="" style="width: 20px; float: left; margin-left: 20px;">
+                      Continue With Email
+                    </button>
+                  </div>           
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary">Enter</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Welcome back.</h3>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <a href="" class="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal4" style="margin-top: 20px; color: black;"><br> Forgot Password?</a>
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Sign in</button>
+                    </div>
+                  </form>
+                  
+                  <div class="line2" style="margin-top: 10px;">
+                    <h5 style="color: black; text-decoration: none; text-shadow: none; width: 30%; margin: auto; font-size: 17px; text-align: center;">Not a member?</h5>
+                  </div>
+                  <div class="join" style="text-align: center;">
+                    <a data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal3" class="" style="color: black;">Join Now</a>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Join now.</h3>
+                    <div class="row g-2 col-11 mx-auto">
+                      <div class="mx-auto col-sm-6" style="justify-content: center;">
+                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                        <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
+                      </div>
+                      <div class="mx-auto col-sm" style="justify-content: center;">
+                        <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                      </div>
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Join</button>
+                    </div>
+                  </form>
+                  
+                  <div class="line2" style="margin-top: 10px;">
+                    <h5 style="color: black; text-decoration: none; text-shadow: none; width: 40%; margin: auto; font-size: 17px; text-align: center;">Already a member?</h5>
+                  </div>
+                  <div class="join" style="text-align: center;">
+                    <a data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2" class="" style="color: black;">Sign in</a>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Forgot your password?</h3>
+                    <p class="mx-auto col-11" style="font-size: 15px;"> No problem. Just enter your email address below — we’ll send you a link to reset it.</p>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Send link</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
                 </div>
               </div>
             </div>
