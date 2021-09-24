@@ -1,25 +1,30 @@
-.mainbox {
-    border: solid red;
-}
-
 .innerbox {
-    border: solid green;
     display: flex;
     padding: 10px;
     text-align: center;
     justify-content: space-evenly;
 }
 
+.innerbox a{
+    text-decoration: none;
+    color: black;
+}
+
+.innerbox a :hover{
+    text-decoration: underline;
+    color: grey;
+}
+
 .content {
-    border: solid  blue;
     display: flex;
     padding: 5px;
     text-align: left;
+    max-width: min-content;
 }
 
 .content img {
     height: 400px;
-
+    width: 400px;
 }
 
 .maincontent {
@@ -32,5 +37,5 @@
     margin-top: -20px;
     height: 28px;
     width: 125px;
-    border: solid;
+    
 }
