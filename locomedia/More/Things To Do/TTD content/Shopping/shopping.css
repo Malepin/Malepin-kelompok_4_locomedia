@@ -1,82 +1,88 @@
-.maintitle {
-    margin: 15px;
+.innerbox {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
 }
 
-.maincontainer {
-    margin:  15px 15px 25px 15px;
-}
-
-.shop {
-    border: dotted grey;
-    border-radius: 15px;
-    padding: 10px;
-    display: block;
-    min-width: 80%; 
-}
-
-.column {
-    float: left;
-    width: 100%;
-    padding: 15px;
-}
-
-.column img {
-    width: 200px;
-    height: 140px;
-    float: left;
-    margin: 2px;
-    border-radius: 15px;
-}
-
-.row {
-    margin: 5px;
-    display: block;
-    flex-direction: column;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.text {
-    margin-left: 14%;
-    text-align: left;
-    padding-left: 25px;
-    max-height: 128px;
-}
-
-a {
+.innerbox a{
     text-decoration: none;
     color: black;
 }
 
+.innerbox a :hover{
+    text-decoration: underline;
+    color: grey;
+}
+
+.content {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    text-align: left;
+    max-width: 1500px;
+}
+
+.content img {
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+}
+
+.maincontent {
+    margin: 10px;
+    display: block;
+    max-width: min-content;
+}
+
+.text {
+    text-align: left;
+    padding: 5px;
+}
+
 .rating img{
-    margin-top: -8px;
+    margin-top: -20px;
     height: 28px;
     width: 125px;
+    
 }
 
-@media screen and (max-width:1500px) {
-    .column {
-      width: 100%;
-    }
-    .text {
-        margin: 5px;
-        padding: 10px;
+.modal .modal-dialog .modal-content .modal-body .btn {
+    margin-bottom: 20px;
+    height: 50px;
+    width: 400px;
+    font-weight: 600;
+}
+
+.modal .modal-dialog .modal-content .modal-body .btn img {
+    height: 20px;
+}
+
+.modal .modal-dialog .modal-content .modal-body a:hover {
+    cursor: pointer;
+}
+
+.modal .modal-dialog .modal-content .modal-body .line2:before, .line2:after {
+  content:" ";
+    flex:1 0 0%;
+  height:2px;
+  background:rgba(0,0,0,0.8);
+    margin:0 0 0 0;
+}
+
+.modal .modal-dialog .modal-content .modal-body .line2:after {
+    margin:0 0 0 0;
+}
+
+@media screen and (max-width:1200px) {
+    .content{
+        display: inline-grid;
+        grid-template-columns: auto auto;
     }
 }
 
-@media screen and (max-width:1000px) {
-    .column {
-      width: 100%;
-      padding-bottom: 20%;
-      display: flex;
-    }
-    .text {
-        margin-left: 0%;
-        padding: 10px;
+@media screen and (max-width:800px) {
+    .content{
+        width: auto;
         display: block;
     }
 }
