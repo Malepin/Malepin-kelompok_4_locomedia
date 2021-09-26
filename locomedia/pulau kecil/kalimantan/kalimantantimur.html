@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Multi</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<style>
+
+.text{
+  margin: 10%;
+  font-size: x-large;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --grid-column-gap: 20px;
+}
+
+
+.carouselPre{
+    grid-auto-flow: column;
+    display: grid;
+    grid-auto-columns: calc((100% - 3 * var(--grid-column-gap))/ 4);
+    grid-column-gap: var(--grid-column-gap);
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    list-style: none;
+    scroll-behavior: smooth;
+    
+}
+
+#title{
+    margin: 10px 10px 10px 0;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.topT{
+    border-top: 1px solid rgb(212, 212, 212);
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.itemsC .textDet{
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+}
+
+.contents{
+    color: white;
+}
+
+.itemsC .contents p{    
+    -webkit-line-clamp: 3;
+    text-align: center;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    width: 90%;
+    margin: auto;
+}
+
+.leftTxtDet{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 33px;
+}
+
+.itemsC{
+    position: relative;
+}
+
+.scrolly{
+    overflow: hidden;
+}
+
+.carouselPre li{
+    scroll-snap-align: start;
+    width: 100%;
+    height: 100%;
+    background-color: royalblue;
+    list-style: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.carouselPre li .bgImg{
+    width: 100%;
+    height: 100%;
+}
+
+.carouselPre li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scrolly{
+    position: relative;
+}
+
+#left,#right{
+    background-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+    border: transparent;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-60%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+#left{
+    left: 0;
+}
+
+#right{
+    right: 0;
+}
+
+@media only screen and (max-width: 890px) {
+    .carouselPre {
+        grid-auto-columns: calc((100% - 2 * var(--grid-column-gap))/ 3);
+        height: 23rem;
+    }
+  }
+
+@media only screen and (max-width: 660px) {
+    .carouselPre {
+        grid-auto-columns: calc((100% - 1 * var(--grid-column-gap))/ 2);
+        height: 25rem;
+    }
+  }
+
+@media only screen and (max-width: 440px) {
+    .carouselPre {
+        grid-auto-columns: 100%;
+        height: 25rem;
+    }
+  }
+
+
+::-webkit-scrollbar {    
+  width: 15px;
+height: 15px;
+border-left: #ededed solid 1px;
+background-color: #fcfcfc;
+border-top: #ededed solid 1px;
+    }
+
+::-webkit-scrollbar-thumb:hover{
+cursor: pointer;
+background: #c7c7c7;
+width: 15px;
+    background-clip: content-box;
+    border: 4px solid transparent;
+border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-button {   
+ display: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+background: #dbdbdb;
+    background-clip: content-box;
+    border: 4px solid transparent;
+border-radius: 10px;
+
+    }
+
+
+</style>
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html" style="display: flex; align-items: center;">
+            <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+            <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+          </a>
+          <div class="button-container">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
+              Sign in
+            </button>
+          </div>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-grid gap-2 col-8 mx-auto" style="justify-content: center; margin-top: 10%; margin-bottom: 10%;">
+                    <button class="btn" type="button" style="border: solid black; border-radius: 25px;;">
+                      <img src="/icon/google.png" alt="" style="width: 20px; float: left; margin-left: 20px;">
+                      Continue With Google
+                    </button>
+                    <button class="btn" type="button" style="border: solid black; border-radius: 25px;">
+                      <img src="/icon/facebook.png" alt="" style="width: 20px; float: left; margin-left: 20px;">
+                      Continue With Facebook
+                    </button>
+                    <button class="btn" type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: solid black; border-radius: 25px;">
+                      <img src="/icon/mail_outline_black_24dp.svg" alt="" style="width: 20px; float: left; margin-left: 20px;">
+                      Continue With Email
+                    </button>
+                  </div>           
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Welcome back.</h3>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <a href="" class="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal4" style="margin-top: 20px; color: black;"><br> Forgot Password?</a>
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Sign in</button>
+                    </div>
+                  </form>
+                  
+                  <div class="line2" style="margin-top: 10px;">
+                    <h5 style="color: black; text-decoration: none; text-shadow: none; width: 30%; margin: auto; font-size: 17px; text-align: center;">Not a member?</h5>
+                  </div>
+                  <div class="join" style="text-align: center;">
+                    <a data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal3" class="" style="color: black;">Join Now</a>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Join now.</h3>
+                    <div class="row g-2 col-11 mx-auto">
+                      <div class="mx-auto col-sm-6" style="justify-content: center;">
+                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                        <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
+                      </div>
+                      <div class="mx-auto col-sm" style="justify-content: center;">
+                        <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                      </div>
+                    </div>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Welcome back.</h3>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Join</button>
+                    </div>
+                  </form>
+                  
+                  <div class="line2" style="margin-top: 10px;">
+                    <h5 style="color: black; text-decoration: none; text-shadow: none; width: 40%; margin: auto; font-size: 17px; text-align: center;">Already a member?</h5>
+                  </div>
+                  <div class="join" style="text-align: center;">
+                    <a data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2" class="" style="color: black;">Sign in</a>
+                  </div>
+                      <a href="" class="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal4" style="margin-top: 20px; color: black;"><br> Forgot Password?</a>
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Sign in</button>
+                    </div>
+                  </form>
+                  
+                  <div class="line2" style="margin-top: 10px;">
+                    <h5 style="color: black; text-decoration: none; text-shadow: none; width: 30%; margin: auto; font-size: 17px; text-align: center;">Not a member?</h5>
+                  </div>
+                  <div class="join" style="text-align: center;">
+                    <a data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal3" class="" style="color: black;">Join Now</a>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Join now.</h3>
+                    <div class="row g-2 col-11 mx-auto">
+                      <div class="mx-auto col-sm-6" style="justify-content: center;">
+                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                        <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
+                      </div>
+                      <div class="mx-auto col-sm" style="justify-content: center;">
+                        <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                      </div>
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Join</button>
+                    </div>
+                  </form>
+                  
+                  <div class="line2" style="margin-top: 10px;">
+                    <h5 style="color: black; text-decoration: none; text-shadow: none; width: 40%; margin: auto; font-size: 17px; text-align: center;">Already a member?</h5>
+                  </div>
+                  <div class="join" style="text-align: center;">
+                    <a data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2" class="" style="color: black;">Sign in</a>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Forgot your password?</h3>
+                    <p class="mx-auto col-11" style="font-size: 15px;"> No problem. Just enter your email address below — we’ll send you a link to reset it.</p>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Send link</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+
+        
+
+
+
+
+
+
+
+
+      <div class="body" style="width: 80%;margin: auto;">      
+
+  <div class="judul"style="display:flex">
+    <h1 style="text-align: left;font-size: 60px;color:red ">Explore</h1>
+    <h1 style="text-align: left;font-size: 60px;">Jawa Barat</h1>
+  </div>
+    
+
+    
+
+        <div class="gambar" style="display: flex;justify-content: center;margin: 15px;">
+            <div class="gambar-besar">
+                <img src="/img/00pulau kecil/jawa/jawa barat/5ee5d42ba7d43.jpg" alt="" height="500px">
+            </div>
+            <div class="gambar-kecil" style="display: flex;flex-direction: column;">
+                  <img src="/img/00pulau kecil/jawa/jawa barat/16-tempat-destinasi-wisata-jawa-barat-termasuk-alam-pantai-dan-daerah-kuningan-2001165.jpg" alt="" style="height: 250px; width: 500px;">
+                  <img src="/img/00pulau kecil/jawa/jawa barat/images.jfif" alt="" style="height: 250px; width: 500px;">
+            </div>
+        </div>
+
+        
+        
+        
+      </div><!--penutupan div gambar-->
+
+      <div class="container"style="display:flex;">
+        <div class="text" style="flex-basis: 50%;text-align: left;">
+         
+         <h1>
+             Tentang Jawa Barat
+         </h1>
+            <p>
+              Provinsi Jawa Barat secara geografis terletak di antara 5º50'- 7º50' Lintang Selatan dan 104º 48'- 108º 48' Bujur Timur, dengan luas wilayah daratan 3.710.061,32 hektar. Wilayah Jawa Barat adalah lokasi yang tepat untuk Anda melakukan beragam jenis wisata, baik itu wisata alam (Kawah Putih, Kebun Raya Bogor, Green Canyon), belanja di FO di Bandung dan rekreasi (Taman Bunga Nusantara, Museum Asia Afrika, Trans Studio Bandung, Istana Bogor, dll), jajanan kuliner yang enak di kota Bandung maupun kota lainnya, atau wisata budaya. Dengan beragam objek wisata yang dimilikinya, Jawa Barat siap memanjakan siapapun yang tertarik untuk datang berkunjung ke Jawa Barat.
+          </p>
+        </div><!--penutupan div text-->
+        <div class="gmap_canvas"style="flex-basis: 50%;margin-top: 25%;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1014065.2870140119!2d107.04468773863593!3d-6.867518478203635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0xbc18a454fc8e9d7e!2sJawa%20Barat!5e0!3m2!1sid!2sid!4v1632637407524!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+
+
+      </div><!--penutupan div container-->
+
+
+
+        <h1 id="title">DESTNATION</h1>
+    
+        <div class="scrolly">
+            <h2 class="topT">Top Destination</h2>
+           
+        <ul class="carouselPre">
+            <li class="itemsC">
+                <div class="contents">
+                    <h1 class="leftTxtDet">Kebun Raya Bogor</h1>
+                    <div class="textDet" style="background-color: black"><p>Kebun yang digunakan sebagai kebun percobaan untuk tanaman yang dikenalkan di Hindia Belanda dan menjadi tempat wisata</p></div>
+                </div>
+                <a href="https://kebunraya.id/bogor">
+                <div class="bgImg"><img src="/img/00pulau kecil/jawa/jawa barat/destinasi 1 kebun raya borog.jpg" alt="image" srcset=""></div>
+              </a>
+            </li>
+            <li class="itemsC">
+                <div class="contents">
+                    <h1 class="leftTxtDet">Green Canyon</h1>
+                    <div class="textDet" style="background-color: black"><p>Green Canyon / Cukan Taneuh yang namanya berasal dari seorang turis karena air yang jernih dan lumut hijau disampingnya</p></div>
+                </div>
+                <a href="https://www.mypangandaran.com/wisata/green-canyon">
+                <div class="bgImg"><img src="/img/00pulau kecil/jawa/jawa barat/destinasi 2 green canyon.jpg" alt="image" srcset=""></div>
+              </a>
+            </li>
+            <li class="itemsC">
+                <div class="contents">
+                    <h1 class="leftTxtDet">Curug Cimahi</h1>
+                    <div class="textDet" style="background-color: black"><p>salah satu destinasi wisata alam yang sangat cantik dan populer di Jawa Barat(Bandung)</p></div>
+                </div>
+                <a href="https://travelingyuk.com/tips-liburan-bersama-keluarga-saat-pandemi/295887/">
+                <div class="bgImg"><img src="/img/00pulau kecil/jawa/jawa barat/destinasi 3 curug cimahi.jpg" alt="image" srcset=""></div>
+              </a>
+            </li>
+            <li class="itemsC">
+                <div class="contents">
+                    <h1 class="leftTxtDet">Kawah Putih</h1>
+                    <div class="textDet" style="background-color: black"><p>wisata Bandung yang paling terkenal. Kawah Putih adalah sebuah danau yang terbentuk akibat letusan Gunung Patuha</p></div>
+                </div>
+                <a href="https://www.ciwideyoutbound.com/kawah-putih.html">
+                <div class="bgImg"><img src="/img/00pulau kecil/jawa/jawa barat/destinasi 4 kawah putih.jpg" alt="image" srcset=""></div>
+              </a>
+            </li>
+            <li class="itemsC">
+                <div class="contents">
+                    <h1 class="leftTxtDet">Orchid Forest Cikole</h1>
+                    <div class="textDet" style="background-color: black"><p>Orchid Forest Cikole merupakan destinasi wisata di kawasan hutan lindung Lembang seluas 12 hektare dan banyak wahana menarik</p></div>
+                </div>
+                <a href="https://travelspromo.com/htm-wisata/orchid-forest-cikole-lembang/">
+                <div class="bgImg"><img src="/img/00pulau kecil/jawa/jawa barat/destinasi 5 orchid forest.jpg" alt="image" srcset=""></div>
+              </a>
+            </li>
+    
+        </ul>
+    </div>
+    <h1 id="title">FOOD</h1>
+    
+    
+        <div class="scrolly">
+            <h2 class="topT">Top Food</h2>
+            
+        <ul class="carouselPre">
+            <li class="itemsC">
+                <div class="contents">
+                    <h1 class="leftTxtDet">Warung Suluh</h1>
+                    <div class="textDet" style="background-color: black"><p>Tempat makan enak di bandung sekaligus tempat nongkrong dengan suasana dan nuansa yang adem dan nyaman.</p></div>
+                </div>
+                <a href="https://tempatwisatadibandung.info/warung-suluh-bandung-restaurant/">
+                <div class="bgImg"><img src="/img/00pulau kecil/jawa/jawa barat/makanan 1 warung suluh.jpg" alt="image" srcset=""></div>
+              </a>
+            </li>
+            <li class="itemsC">
+                <div class="contents">
+                    <h1 class="leftTxtDet">The Valley</h1>
+                    <div class="textDet" style="background-color: black"><p>Cafe yang memiliki banyak keistimewaan yang dimiliki Dago. The Valley juga menawarkan tempat penginapan.</p></div> 
+                </div>
+                <a href="https://tempatwisatadibandung.info/the-valley-bandung-resort-hotel-cafe/">
+                <div class="bgImg"><img src="/img/00pulau kecil/jawa/jawa barat/makanan 2 the valley bandung.jpg" alt="image" srcset=""></div>
+              </a>
+            </li>
+            <li class="itemsC">
+                <div class="contents">
+                    <h1 class="leftTxtDet">Rijsttafel Resto</h1>
+                    <div class="textDet" style="background-color: black"><p>Tempat makan keluarga dengan suasana yang sejuk yang menyediakan menu nusantara</p></div>
+                </div>
+                <a href="https://www.qraved.com/bandung/rijsttafel-resto-pasir-kaliki">
+                <div class="bgImg"><img src="/img/00pulau kecil/jawa/jawa barat/makanan 3 rijsttafel resto.jpg" alt="image" srcset=""></div>
+              </a>
+            </li>
+            <li class="itemsC">
+                <div class="contents">
+                    <h1 class="leftTxtDet">Gurih 7 Bogor</h1>
+                    <div class="textDet" style="background-color: black"><p>Tempat makan bernuansa pedesaan yang disertai destinasi wisata yang bagus dan eksotis</p></div>
+                </div>
+                <a href="https://www.restogurih7.com/">
+                <div class="bgImg"><img src="/img/00pulau kecil/jawa/jawa barat/makanan 4 gurih 7 bogor.jfif" alt="image" srcset=""></div>
+              </a>
+            </li>
+            <li class="itemsC">
+                <div class="contents">
+                    <h1 class="leftTxtDet">Warung Bu Imas</h1>
+                    <div class="textDet" style="background-color: black"><p>Tempat makan populer di Bandung ini menawarkan ragam kuliner citarasa Sunda yang kental. </p></div>
+                </div>
+                <a href="https://www.traveloka.com/id-id/restaurants/indonesia/detail/warung-nasi-ibu-imas-balong-gede-67-42162">
+                <div class="bgImg"><img src="/img/00pulau kecil/jawa/jawa barat/makanan 5 warung bu imas.jpg" alt="image" srcset=""></div>
+              </a>
+            </li>
+    
+        </ul>
+    </div>
+    
+    
+
+      
+        
+
+    </div><!-- penutupan div body-->
+    
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
