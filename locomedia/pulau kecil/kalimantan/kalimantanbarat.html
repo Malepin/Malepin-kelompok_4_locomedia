@@ -16,16 +16,10 @@
 <style>
 
 .text{
-  margin: 10%;
-  font-size: x-large;
-  font-family: 'Times New Roman', Times, serif;
-
+  font-size: 1em;
 }
 
 *{
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
@@ -44,13 +38,15 @@
     overflow-y: hidden;
     list-style: none;
     scroll-behavior: smooth;
-    
+    margin-right:5%;
+    margin-left: 5%;
 }
 
 #title{
     margin: 10px 10px 10px 0;
     font-size: 34px;
     font-weight: 600;
+    text-align: center;
 }
 
 .topT{
@@ -102,8 +98,8 @@
 
 .carouselPre li{
     scroll-snap-align: start;
-    width: 100%;
-    height: 100%;
+    width: 16rem;
+    height: 23rem;
     background-color: royalblue;
     list-style: none;
     border-radius: 20px;
@@ -148,6 +144,16 @@
 
 #right{
     right: 0;
+}
+@media screen and (max-width:1200px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .text p{
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 890px) {
@@ -438,57 +444,55 @@ border-radius: 10px;
 
 
 
-      <div class="body" style="width: 80%;margin: auto;">      
+      <div class="body" style="margin-left:5%; margin-right:5%;">      
 
-  <div class="judul"style="display:flex">
-    <h1 style="text-align: left;font-size: 60px;color:red ">Explore</h1>
-    <h1 style="text-align: left;font-size: 60px;">Kalimantan Barat</h1>
+  <div class="judul"style="display:flex; margin-left:2%;">
+    <h1 style="text-align: left;font-size: 4em;color:red ">Explore</h1>
+    <h1 style="text-align: left;font-size: 4em;">Kalimanan Barat</h1>
   </div>
     
 
     
 
-        <div class="gambar" style="display: flex;justify-content: center;margin: 15px;">
-            <div class="gambar-besar">
-                <img src="/img/00pulau kecil/kalimantan/kalimantan barat/gambar gede.jpg" alt="" height="500px">
-            </div>
-            <div class="gambar-kecil" style="display: flex;flex-direction: column;">
-                  <img src="/img/00pulau kecil/kalimantan/kalimantan barat/gambar kecil1.jpg" alt="" style="height: 250px; width: 500px;">
-                  <img src="/img/00pulau kecil/kalimantan/kalimantan barat/gambar kecil 2.jpg.crdownload" alt="" style="height: 250px; width: 500px;">
-            </div>
-        </div>
+  <div class="gambar" style="display: flex;justify-content: center;margin: 15px;">
+    <div class="gambar-besar">
+        <img src="/img/00pulau kecil/kalimantan/kalimantan barat/gambar gede.jpg" alt="" height="500px">
+    </div>
+    <div class="gambar-kecil" style="display: flex;flex-direction: column;">
+          <img src="/img/00pulau kecil/kalimantan/kalimantan barat/gambar kecil1.jpg" alt="" style="height: 250px; width: 500px;">
+          <img src="/img/00pulau kecil/kalimantan/kalimantan barat/gambar kecil 2.jpg" alt="" style="height: 250px; width: 500px;">
+    </div>
+</div>
 
         
         
         
       </div><!--penutupan div gambar-->
 
-      <div class="container"style="display:flex;">
-        <div class="text" style="flex-basis: 50%;text-align: left;">
+      <div class="container"style="display:flex; align-items:center; margin-top:10%; width: 80%; margin-bottom:10%;">
+        <div class="text" style="flex-basis: 70%;text-align: left; margin-right: 5%;">
          
-         <h1>
+         <h1 style="font-size: 3rem; text-align: center; font-weight: 700;">
              Tentang Kalimanan Barat
          </h1>
-            <p>
-                Propinsi Kalimantan Barat terletak di bagian barat pulau Kalimantan atau di antara garis 2o08 LU serta 3005 LS serta di antara 108o0 BT dan 114o10 BT pada peta bumi. Berdasarkan letak geografis yang spesifik ini maka, daerah Kalimantan Barat tepat dilalui oleh garis Khatulistiwa (garis lintang 0o) tepatnya di atas Kota Pontianak. Karena pengaruh letak ini pula, maka Kalbar adalah salah satu daerah tropik dengan suhu udara cukup tinggi serta diiringi kelembaban yang tinggi.
-          </p>
+         <p>
+          Propinsi Kalimantan Barat terletak di bagian barat pulau Kalimantan atau di antara garis 2o08 LU serta 3005 LS serta di antara 108o0 BT dan 114o10 BT pada peta bumi. Berdasarkan letak geografis yang spesifik ini maka, daerah Kalimantan Barat tepat dilalui oleh garis Khatulistiwa (garis lintang 0o) tepatnya di atas Kota Pontianak. Karena pengaruh letak ini pula, maka Kalbar adalah salah satu daerah tropik dengan suhu udara cukup tinggi serta diiringi kelembaban yang tinggi.
+    </p>
         </div><!--penutupan div text-->
-        <div class="gmap_canvas"style="flex-basis: 50%;margin-top: 25%;">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4085434.7667580675!2d108.8675210621949!3d-0.47295677262812175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e0518178cebfebb%3A0xcd5ceced4c2148a0!2sKalimantan%20Barat!5e0!3m2!1sid!2sid!4v1632642488000!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-          </div>
-
+        <div class="gmap_canvas"style="flex-basis: 30%; margin-left:5%; ">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4085434.7667580675!2d108.8675210621949!3d-0.47295677262812175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e0518178cebfebb%3A0xcd5ceced4c2148a0!2sKalimantan%20Barat!5e0!3m2!1sid!2sid!4v1632642488000!5m2!1sid!2sid" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
 
       </div><!--penutupan div container-->
 
 
-
  
-        <h1 id="title">DESTNATION</h1>
+   
+        <h1 id="title" style="text-align: center;">DESTINATION</h1>
     
         <div class="scrolly">
-            <h2 class="topT">Top Destination</h2>
            
-        <ul class="carouselPre">
+          <ul class="carouselPre">
             <li class="itemsC">
                 <div class="contents">
                     <h1 class="leftTxtDet">Pantai Temajuk</h1>
@@ -522,7 +526,7 @@ border-radius: 10px;
                     <div class="textDet" style="background-color: black"><p>Dinding bukit yang begitu terjal menjulang tinggi dipenuhi tnaman yang hijau hampir keseluruhan tebingnya</p></div>
                 </div>
                 <a href="http://direktoripariwisata.id/unit/3754">
-                <div class="bgImg"><img src="/img/00pulau kecil/kalimantan/kalimantan barat/destinasi 3 wong prawan.jpg.crdownload" alt="image" srcset=""></div>
+                <div class="bgImg"><img src="/img/00pulau kecil/kalimantan/kalimantan barat/destinasi 4 air terjun wong prawan.jpg" alt="image" srcset=""></div>
               </a>
             </li>
             <li class="itemsC">
@@ -541,9 +545,8 @@ border-radius: 10px;
     
     
         <div class="scrolly">
-            <h2 class="topT">Top Food</h2>
             
-        <ul class="carouselPre">
+          <ul class="carouselPre">
             <li class="itemsC">
                 <div class="contents">
                     <h1 class="leftTxtDet">Abang Kepiting Restaurant</h1>
@@ -592,7 +595,7 @@ border-radius: 10px;
     
         </ul>
     </div>
-
+    
     
 
       
