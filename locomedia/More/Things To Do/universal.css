@@ -67,7 +67,7 @@ body {
 }
 
 .info-container{
-    border: dotted gray;
+
     border-radius: 15px;
     min-width: 25%;
 }
@@ -126,6 +126,8 @@ body {
     height: auto;
     padding: 0px;
     margin-left: -10px;
+    border: solid;
+    border-radius: 15px;
 }
 
 .button-container :hover{
@@ -210,7 +212,6 @@ body {
         padding-bottom: 75%;
         position: relative;
         border-radius: 15px;
-        margin-top: 25px;
     }
     .gmap_canvas iframe {
         position: absolute;
