@@ -55,133 +55,6 @@
 .text{
   font-size: 1em;
 }
-
-*{
-    box-sizing: border-box;
-}
-
-:root {
-    --grid-column-gap: 20px;
-}
-
-
-.carouselPre{
-    grid-auto-flow: column;
-    display: grid;
-    grid-auto-columns: calc((100% - 3 * var(--grid-column-gap))/ 4);
-    grid-column-gap: var(--grid-column-gap);
-    scroll-snap-type: x mandatory;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    list-style: none;
-    scroll-behavior: smooth;
-    margin-right:5%;
-    margin-left: 5%;
-}
-
-#title{
-    margin: 10px 10px 10px 0;
-    font-size: 34px;
-    font-weight: 600;
-    text-align: center;
-}
-
-.topT{
-    border-top: 1px solid rgb(212, 212, 212);
-    padding: 10px 0;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.itemsC .textDet{
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-    display: flex;
-}
-
-.contents{
-    color: white;
-}
-
-.itemsC .contents p{    
-    -webkit-line-clamp: 3;
-    text-align: center;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-box-orient: vertical;
-    font-size: 12px;
-    line-height: 1.25;
-    font-weight: 400;
-    width: 90%;
-    margin: auto;
-}
-
-.leftTxtDet{
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    top: 33px;
-}
-
-.itemsC{
-    position: relative;
-}
-
-.scrolly{
-    overflow: hidden;
-}
-
-.carouselPre li{
-    scroll-snap-align: start;
-    width: 16rem;
-    height: 23rem;
-    background-color: royalblue;
-    list-style: none;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.carouselPre li .bgImg{
-    width: 100%;
-    height: 100%;
-}
-
-.carouselPre li img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.scrolly{
-    position: relative;
-}
-
-#left,#right{
-    background-color: rgba(255, 255, 255, 0.9);
-    outline: none;
-    border: transparent;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    position: absolute;
-    top: 50%;
-    transform: translate(0,-60%);
-    cursor: pointer;
-    z-index: 2;
-}
-
-#left{
-    left: 0;
-}
-
-#right{
-    right: 0;
-}
 @media screen and (max-width:1200px) {
   .container{
     display: flex;
@@ -193,55 +66,31 @@
   }
 }
 
-@media only screen and (max-width: 890px) {
-    .carouselPre {
-        grid-auto-columns: calc((100% - 2 * var(--grid-column-gap))/ 3);
-        height: 23rem;
-    }
-  }
-
-@media only screen and (max-width: 660px) {
-    .carouselPre {
-        grid-auto-columns: calc((100% - 1 * var(--grid-column-gap))/ 2);
-        height: 25rem;
-    }
-  }
-
-@media only screen and (max-width: 440px) {
-    .carouselPre {
-        grid-auto-columns: 100%;
-        height: 25rem;
-    }
-  }
-
-
-::-webkit-scrollbar {    
-  width: 15px;
-height: 15px;
-border-left: #ededed solid 1px;
-background-color: #fcfcfc;
-border-top: #ededed solid 1px;
+.modal .modal-dialog .modal-content .modal-body .btn {
+        margin-bottom: 20px;
+        height: 50px;
+        width: 400px;
+        font-weight: 600;
     }
 
-::-webkit-scrollbar-thumb:hover{
-cursor: pointer;
-background: #c7c7c7;
-width: 15px;
-    background-clip: content-box;
-    border: 4px solid transparent;
-border-radius: 10px;
-}
-
-    ::-webkit-scrollbar-button {   
- display: none;
+    .modal .modal-dialog .modal-content .modal-body .btn img {
+        height: 20px;
     }
 
-    ::-webkit-scrollbar-thumb {
-background: #dbdbdb;
-    background-clip: content-box;
-    border: 4px solid transparent;
-border-radius: 10px;
+    .modal .modal-dialog .modal-content .modal-body a:hover {
+        cursor: pointer;
+    }
 
+    .modal .modal-dialog .modal-content .modal-body .line2:before, .line2:after {
+      content:" ";
+        flex:1 0 0%;
+      height:2px;
+      background:rgba(0,0,0,0.8);
+        margin:0 0 0 0;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body .line2:after {
+        margin:0 0 0 0;
     }
 
 
@@ -684,6 +533,75 @@ border-radius: 10px;
           </div>
         </div>
       </div>
+
+      <footer>
+        <div class="footer-bottom" style="color: black; padding-top: 30px; background-color:rgb(248, 243, 236);">
+            <div class="container">
+                <div class="row justify-content-xl-center">
+                    <div class="col-lg-3 col-md-5">
+                        <div class="header">
+                            <h5>Locomedia</h5>
+                        </div>
+                        <ul class="footer-nav nav flex-column">
+                            <li class="nav-item">
+                                Universitas Tarumanagara Jalan Letjen S. Parman No.1 Jakarta Barat 11440, Indonesia
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 col-md-5">
+                        <div class="header">
+                            <h5>About Us</h5>
+                        </div>
+                        <ul class="footer-nav nav flex-column">
+                            <li class="nav-item">
+                                Locomedia dibentuk untuk meningkatkan kewaspadaan dan pengetahuan tentang kebudayaan dan tourism Indonesia terhadap masyarakat Lokal maupun Turis dari penjuru Dunia, dengan ada-nya Locomedia, Turis dapat melihat berbagai destinasi wisata, Kuliner, dan pusat kebudayaan yang  bertujuan untuk mengenalkan pengalaman baru serta membanggakan kebudayaan Indonesia yang selama ini belum banyak diliput media Dunia. 
+                            </li>
+                            <li class="nav-item">
+                                Terms of Use and Privacy Statement.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-5">
+                        <div class="header">
+                            <h5>Contact Us</h5>
+                        </div>
+                        <ul class="footer-nav nav flex-column">
+                            <li class="nav-item">
+                                FAQ
+                            </li>
+                            <li class="nav-item">
+                                Call 1802-333
+                            </li>
+                            <li class="nav-item">
+                               Email Us
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-5">
+                        <div class="header">
+                            <h5>Other</h5>
+                        </div>
+                        <ul class="footer-nav nav flex-column">
+                            <li class="nav-item">
+                                <img src="icon/instagram.svg" alt="" width="18px" height="20px"> Instagram
+                            </li>
+                            <li class="nav-item">
+                                <img src="icon/facebook.svg" alt="" width="18px" height="20px"> Facebook
+                            </li>
+                            <li class="nav-item">
+                                <img src="icon/twitter.svg" alt="" width="18px" height="20px"> Twitter
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg" style="color: black; padding: 20px; background-color:rgb(248, 243, 236)">
+            <div class="text-center">
+                &copy Copyright Locomedia All Rights Reserved.
+            </div>
+        </div>
+    </footer>
     
     
 
