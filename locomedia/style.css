@@ -6,8 +6,8 @@
 }
 
 .link-container nav {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 
 .search-bar {
@@ -30,14 +30,16 @@
 
 .main-island .body {
     display: flex;
+    width: 95%;
+    margin: auto;
 }
 
 .main-island .body .text{
-    flex-basis: 30%;
+    flex-basis: 25%;
 }
 
 .main-island .body #carouselExampleControls{
-    flex-basis: 70%;
+    flex-basis: 75%;
 }
 
 .main-island .body .carousel-inner .carousel-item .cards3 .card a{
@@ -52,14 +54,13 @@
 }
 
 .main-island .body .carousel-inner .carousel-item .cards3 .card{
-    margin-right: 25px;
-    width: 270px;
-    height: 256px;
+    margin-right: 1%;
+    margin-left: 1%;
+    width: 70%;
 }
 
 .main-island .body .carousel-inner .carousel-item img{
-    height: 200px;
-    width: 269px;
+    height: 12rem;
 }
 
 .moretoexplore{
@@ -73,16 +74,14 @@
 
 .moretoexplore .body .card{
     background-color: rgb(255, 255, 247);
-    height: 364px;
-    width: 367px;
+    height: 80%;
     margin-left: 8px;
     margin-right: 8px;
     margin-bottom: 30px;
 }
 
 .moretoexplore .body .card img{
-    height: 233px;
-    width: 366px;
+    height: 15rem;
 }
 
 .line2 {
@@ -104,7 +103,7 @@
 }
 
 .line2:after {
-  margin:0 0 0 1.5rem;
+  margin: 0 0 0 1.5rem;
 }
 
 .sponsor .body .credit .image {
@@ -113,4 +112,19 @@
 
 .sponsor .body .credit .image img{
     width: 20px;
+}
+
+@media screen and (max-width:1200px) {
+    .main-island .body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-island .body .text{
+        align-self: center;
+    }
+
+    .main-island .header {
+        text-align: center;
+    }
 }
