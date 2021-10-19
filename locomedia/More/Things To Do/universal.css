@@ -126,8 +126,6 @@ body {
     height: auto;
     padding: 0px;
     margin-left: -10px;
-    border: solid;
-    border-radius: 15px;
 }
 
 .button-container :hover{
