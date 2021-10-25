@@ -1,13 +1,12 @@
 {
-  "name": "locomedia-2",
+  "name": "locomedia2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon app"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Kelompok 4 (Locomedia)",
+  "author": "Kelompok 4 Locomedia",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.14"

@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Trial</title>
+
+    <style>
+      .modal .modal-dialog .modal-content .modal-body .btn {
+        margin-bottom: 20px;
+        height: 50px;
+        width: 400px;
+        font-weight: 600;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body .btn img {
+        height: 20px;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body a:hover {
+        cursor: pointer;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body .line2:before, .line2:after {
+      content:" ";
+        flex:1 0 0%;
+      height:2px;
+      background:rgba(0,0,0,0.8);
+        margin:0 0 0 0;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body .line2:after {
+        margin:0 0 0 0;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/index.html" style="display: flex; align-items: center;">
+            <img src="logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+            <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+          </a>
+          <div class="button-container">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
+              Sign in
+            </button>
+          </div>
+
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-grid gap-2 col-8 mx-auto" style="justify-content: center; margin-top: 10%; margin-bottom: 10%;">
+                    <button class="btn" type="button" style="border: solid black; border-radius: 25px;;">
+                      <img src="/icon/google.png" alt="" style="width: 20px; float: left; margin-left: 20px;">
+                      Continue With Google
+                    </button>
+                    <button class="btn" type="button" style="border: solid black; border-radius: 25px;">
+                      <img src="/icon/facebook.png" alt="" style="width: 20px; float: left; margin-left: 20px;">
+                      Continue With Facebook
+                    </button>
+                    <button class="btn" type="button" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: solid black; border-radius: 25px;">
+                      <img src="/icon/mail_outline_black_24dp.svg" alt="" style="width: 20px; float: left; margin-left: 20px;">
+                      Continue With Email
+                    </button>
+                  </div>           
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Welcome back.</h3>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <a href="" class="" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal4" style="margin-top: 20px; color: black;"><br> Forgot Password?</a>
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Sign in</button>
+                    </div>
+                  </form>
+                  
+                  <div class="line2" style="margin-top: 10px;">
+                    <h5 style="color: black; text-decoration: none; text-shadow: none; width: 30%; margin: auto; font-size: 17px; text-align: center;">Not a member?</h5>
+                  </div>
+                  <div class="join" style="text-align: center;">
+                    <a data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal3" class="" style="color: black;">Join Now</a>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Join now.</h3>
+                    <div class="row g-2 col-11 mx-auto">
+                      <div class="mx-auto col-sm-6" style="justify-content: center;">
+                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                        <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
+                      </div>
+                      <div class="mx-auto col-sm" style="justify-content: center;">
+                        <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                      </div>
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Join</button>
+                    </div>
+                  </form>
+                  
+                  <div class="line2" style="margin-top: 10px;">
+                    <h5 style="color: black; text-decoration: none; text-shadow: none; width: 40%; margin: auto; font-size: 17px; text-align: center;">Already a member?</h5>
+                  </div>
+                  <div class="join" style="text-align: center;">
+                    <a data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2" class="" style="color: black;">Sign in</a>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Forgot your password?</h3>
+                    <p class="mx-auto col-11" style="font-size: 15px;"> No problem. Just enter your email address below — we’ll send you a link to reset it.</p>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Send link</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="link-container">
+        <nav class="navbar navbar-light bg-light" style="border: solid; border-radius: 20px;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              Tamasya &nbsp &nbsp
+              <img src="icon/explore.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+          </div>
+        </nav>
+        <nav class="navbar navbar-light bg-light" style="border: solid; border-radius: 20px;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              Kuliner &nbsp &nbsp
+              <img src="icon/restaurant.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            </a>
+          </div>
+        </nav>
+        <nav class="navbar navbar-light bg-light" style="border: solid; border-radius: 20px;">
+          <li class="nav-item dropdown" style="list-style: none;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+              Recommendation
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/More/Things To Do/Cities/cities.html">Cities</a></li>
+              <li><a class="dropdown-item" href="/More/Things To Do/Nature and Wildlife/naw.html">Nature</a></li>
+              <li><a class="dropdown-item" href="/More/Things To Do/Famous Places/famousplaces.html">Famous Places</a></li>
+              <li><a class="dropdown-item" href="/More/Things To Do/Shopping/shopping.html">Shopping</a></li>
+              <li><a class="dropdown-item" href="/More/Things To Do/Fun/fun.html">Fun</a></li>
+            </ul>
+          </li>
+        </nav>
+      </div>
+
+      <div class="search-bar">
+        <img src="newDestination/indonesia.jpg" class="img-fluid" alt="...">
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Where To" aria-label="Search" style="width: 500px; text-align: center;">
+        </form>
+      </div>
+
+      <div class="main-island">
+        <div class="header" style="margin-bottom: 30px; margin-top: 10px; margin-left: 4.6%; font-weight: bold; size: 20px;">
+          <h1>Main Island</h1>
+        </div>
+        <div class="body">
+          <div class="text">
+            <h3 style="text-align: center; font-size: 150%;">
+              The five biggest island <br>
+              in Indonesia
+            </h3>
+          </div>
+          <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel" style="margin-bottom: 60px;" data-bs-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="cards3">
+                    <div class="card" >
+                      <a href="kalimantan.html">
+                        <img src="img/kalimantan.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Kalimantan</h5>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card">
+                      <a href="sulawesi.html">
+                        <img src="img/sulawesi.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Sulawesi</h5>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card">
+                      <a href="jawa.html">
+                        <img src="img/jawa.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Jawa</h5>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="cards3">
+                    <div class="card">
+                      <a href="sulawesi.html">
+                        <img src="img/sulawesi.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Sulawesi</h5>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card">
+                      <a href="jawa.html">
+                        <img src="img/jawa.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Jawa</h5>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card">
+                      <a href="sumatera.html">
+                        <img src="img/sumatera.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Sumatera</h5>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="cards3">
+                    <div class="card">
+                      <a href="jawa.html">
+                        <img src="img/jawa.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Jawa</h5>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card">
+                      <a href="sumatera.html">
+                        <img src="img/sumatera.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Sumatera</h5>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card">
+                      <a href="papua.html">
+                        <img src="img/papua.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Papua</h5>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="cards3">
+                    <div class="card">
+                      <a href="sumatera.html">
+                        <img src="img/sumatera.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Sumatera</h5>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card">
+                      <a href="papua.html">
+                        <img src="img/papua.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Papua</h5>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card" >
+                      <a href="kalimantan.html">
+                        <img src="img/kalimantan.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Kalimantan</h5>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="cards3">
+                    <div class="card">
+                      <a href="papua.html">
+                        <img src="img/papua.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Papua</h5>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card" >
+                      <a href="kalimantan.html">
+                        <img src="img/kalimantan.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Kalimantan</h5>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="card">
+                      <a href="sulawesi.html">
+                        <img src="img/sulawesi.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Sulawesi</h5>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color: black;"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true" style="background-color: black;"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="moretoexplore" style="background-color:rgb(248, 243, 236); margin-top: 10px; display: flex; flex-direction: column; padding-top: 4%;">
+        <div class="header" style="margin-left: 5%; margin-bottom: 2%;">
+          <h3 style="float: left; font-size: 27x;">More to explore</h3>
+        </div>
+        <div class="body">
+          <div class="card" style="height: 24rem;">
+            <a href="more to explore/artikel1.html">
+              <img src="more to explore/img/pemandangan.jpg" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body" style="text-align: center">
+              <a href="more to explore/artikel1.html" style="color: black; text-decoration: none;">
+                <div class="title" style="margin-top: 5px; margin-bottom: 15px;">
+                  <h6>From Locomedia</h6>
+                </div>
+                <p class="card-text" style="font-weight: 500; font-size: 1.1em;">Popular Indonesian Tourist Destinations in the Eyes of the World</p>
+              </a>
+            </div>
+          </div>
+          <div class="card" style="height: 24rem;">
+            <a href="more to explore/artikel2.html/artikel2.html">
+              <img src="more to explore/img/peta suku.jpg" class="card-img-top" alt="...">
+            </a>
+            <div class="card-body" style="text-align: center">
+              <a href="more to explore/artikel2.html/artikel2.html" style="color: black; text-decoration: none;">
+                <div class="title" style="margin-top: 5px; margin-bottom: 15px;">
+                  <h6>From Locomedia</h6>
+                </div>
+                <p class="card-text" style="font-weight: 500; font-size: 1.1em;">List of Ethnic Groups in Indonesia and Social Institutions of Its People</p>
+              </a>
+            </div>
+          </div>
+          <div class="card" style="height: 24rem;">
+            <a href="more to explore/artikel3.html">
+              <img src="more to explore/img/peta hewan.jpg" class="card-img-top" alt="...">
+            </a>
+          <div class="card-body" style="text-align: center">
+              <a href="more to explore/artikel3.html" style="color: black; text-decoration: none;">
+                <div class="title" style="margin-top: 5px; margin-bottom: 15px;">
+                  <h6>From Locomedia</h6>
+                </div>
+                <p class="card-text" style="font-weight: 500; font-size: 1.1em;">List of rare animals in Indonesia</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="sponsor">
+        <div class="header" style="text-align: center;">
+          <div class="line2" style="margin-top: 6%;">
+            <h5 style="background-color: black; color: white; width: 20%; margin: auto; padding: 10px; font-size: 15px;">Sponsored by <br> 
+              Universitas Tarumanagara</h5>
+          </div>
+        </div>
+
+        <div class="body" style="width: 80%; position: relative; margin-right: auto; margin-left: auto; margin-bottom: 50px;">
+          <div class="pic" style="display: flex; align-items: center;">
+            <img src="logo/Logo UNTAR Universitas Tarumanegara.png" class="d-block mx-auto" alt="..." style="width: 60%;">
+          </div>
+
+        </div>
+      </div>
+
+
+      <footer>
+        <div class="footer-bottom" style="color: black; padding-top: 30px; background-color:rgb(248, 243, 236);">
+            <div class="container">
+                <div class="row justify-content-xl-center">
+                    <div class="col-lg-3 col-md-5">
+                        <div class="header">
+                            <h5>Locomedia</h5>
+                        </div>
+                        <ul class="footer-nav nav flex-column">
+                            <li class="nav-item">
+                                Universitas Tarumanagara Jalan Letjen S. Parman No.1 Jakarta Barat 11440, Indonesia
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 col-md-5">
+                        <div class="header">
+                            <h5>About Us</h5>
+                        </div>
+                        <ul class="footer-nav nav flex-column">
+                            <li class="nav-item">
+                                Locomedia dibentuk untuk meningkatkan kewaspadaan dan pengetahuan tentang kebudayaan dan tourism Indonesia terhadap masyarakat Lokal maupun Turis dari penjuru Dunia, dengan ada-nya Locomedia, Turis dapat melihat berbagai destinasi wisata, Kuliner, dan pusat kebudayaan yang  bertujuan untuk mengenalkan pengalaman baru serta membanggakan kebudayaan Indonesia yang selama ini belum banyak diliput media Dunia. 
+                            </li>
+                            <li class="nav-item">
+                                Terms of Use and Privacy Statement.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-5">
+                        <div class="header">
+                            <h5>Contact Us</h5>
+                        </div>
+                        <ul class="footer-nav nav flex-column">
+                            <li class="nav-item">
+                                FAQ
+                            </li>
+                            <li class="nav-item">
+                                Call 1802-333
+                            </li>
+                            <li class="nav-item">
+                               Email Us
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-5">
+                        <div class="header">
+                            <h5>Other</h5>
+                        </div>
+                        <ul class="footer-nav nav flex-column">
+                            <li class="nav-item">
+                                <img src="icon/instagram.svg" alt="" width="18px" height="20px"> Instagram
+                            </li>
+                            <li class="nav-item">
+                                <img src="icon/facebook.svg" alt="" width="18px" height="20px"> Facebook
+                            </li>
+                            <li class="nav-item">
+                                <img src="icon/twitter.svg" alt="" width="18px" height="20px"> Twitter
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg" style="color: black; padding: 20px; background-color:rgb(248, 243, 236)">
+            <div class="text-center">
+                &copy Copyright Locomedia All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    
+      
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>
