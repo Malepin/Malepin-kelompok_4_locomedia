@@ -87,10 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
   
     const grid = document.querySelector('.grid')
     const resultDisplay = document.querySelector('#result')
+    const HighScore = document.querySelector('#endresult')
     let cardsChosen = []
     let cardsChosenId = []
     let cardsWon = []
     let score = 0
+    let highscore = 0
   
     //create your board
     function createBoard() {
@@ -115,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('You have clicked the same image!')
       }
       else if (cardsChosen[0] === cardsChosen[1]) {
-        alert('You found a match')
         cards[optionOneId].setAttribute('src', 'images/white.png')
         cards[optionTwoId].setAttribute('src', 'images/white.png')
         cards[optionOneId].removeEventListener('click', flipCard)
@@ -132,6 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
       resultDisplay.textContent = score
       if  (cardsWon.length === cardArray.length/2) {
         resultDisplay.textContent = 'Congratulations! You found them all!'
+        if (highscore < score){
+          HighScore.textContent = score
+        }
       }
     }
   
