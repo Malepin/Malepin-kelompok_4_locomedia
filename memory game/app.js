@@ -126,13 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         cards[optionOneId].setAttribute('src', 'images/blank2.jpeg')
         cards[optionTwoId].setAttribute('src', 'images/blank2.jpeg')
-        score -= 50
+        score -= 100
       }
       cardsChosen = []
       cardsChosenId = []
       resultDisplay.textContent = score
       if  (cardsWon.length === cardArray.length/2) {
-        resultDisplay.textContent = 'Congratulations! You found them all!'
         if (highscore < score){
           HighScore.textContent = score
         }
@@ -145,6 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[i].remove()
           }
           createBoard()
+        } else {
+          resultDisplay.textContent = 'Congratulations! You found them all!'
         }
       }
     }
