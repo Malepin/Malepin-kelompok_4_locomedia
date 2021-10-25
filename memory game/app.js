@@ -90,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsChosen = []
     let cardsChosenId = []
     let cardsWon = []
+    let score = 0
   
     //create your board
     function createBoard() {
@@ -120,14 +121,15 @@ document.addEventListener('DOMContentLoaded', () => {
         cards[optionOneId].removeEventListener('click', flipCard)
         cards[optionTwoId].removeEventListener('click', flipCard)
         cardsWon.push(cardsChosen)
+        score += 1000
       } else {
         cards[optionOneId].setAttribute('src', 'images/blank2.jpeg')
         cards[optionTwoId].setAttribute('src', 'images/blank2.jpeg')
-        alert('Sorry, try again')
+        score -= 50
       }
       cardsChosen = []
       cardsChosenId = []
-      resultDisplay.textContent = cardsWon.length
+      resultDisplay.textContent = score
       if  (cardsWon.length === cardArray.length/2) {
         resultDisplay.textContent = 'Congratulations! You found them all!'
       }
