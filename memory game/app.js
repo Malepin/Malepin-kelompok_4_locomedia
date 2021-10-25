@@ -136,6 +136,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (highscore < score){
           HighScore.textContent = score
         }
+        var answer = window.confirm('Try Again ?');
+        if (answer){
+          score = 0
+          resultDisplay.textContent = score
+          cardsWon = []
+          for (let i = 0; i < cardArray.length; i++) {
+            cards[i].remove()
+          }
+          createBoard()
+        }
       }
     }
   
