@@ -2,8 +2,11 @@ const express = require('express')
 
 const app = express()
 
+app.use(express.static('public'))
+app.set('view engine', 'ejs')
+
 app.get('/', function(req,res) {
-    res.sendFile(__dirname+ '/views/pages/index.html')
+    res.render('pages/index')
 })
 
 app.listen(3000, ()=> {

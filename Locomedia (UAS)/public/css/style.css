@@ -1,0 +1,130 @@
+.link-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.link-container nav {
+    margin-left: 7%;
+    margin-right: 7%;
+}
+
+.search-bar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    margin-bottom: 210px;
+}
+
+.search-bar form {
+    margin-top: -190px;
+    justify-content: center;
+}
+
+.search-bar img {
+    height: 333px;
+    width: 100%;
+}
+
+.main-island .body {
+    display: flex;
+    width: 95%;
+    margin: auto;
+}
+
+.main-island .body .text{
+    flex-basis: 25%;
+}
+
+.main-island .body #carouselExampleControls{
+    flex-basis: 75%;
+}
+
+.main-island .body .carousel-inner .carousel-item .cards3 .card a{
+    text-decoration: none;
+    color: black;
+}
+
+.main-island .body .carousel-inner .carousel-item .cards3{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.main-island .body .carousel-inner .carousel-item .cards3 .card{
+    margin-right: 1%;
+    margin-left: 1%;
+    width: 70%;
+}
+
+.main-island .body .carousel-inner .carousel-item img{
+    height: 12rem;
+}
+
+.moretoexplore{
+    margin-bottom: 50px;
+}
+
+.moretoexplore .body{
+    display: flex;
+    justify-content: center;
+}
+
+.moretoexplore .body .card{
+    background-color: rgb(255, 255, 247);
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 30px;
+    width: 24.5rem;
+}
+
+.moretoexplore .body .card img{
+    height: 15rem;
+}
+
+.line2 {
+	margin:0 0 1em;
+	color:#F00;
+	text-shadow:1px 1px 1px #000;
+	font-size:1.5em;
+	text-align:center;
+    display:flex;
+    align-items:center;
+}
+
+.line2:before,.line2:after {
+	content:" ";
+    flex:1 0 0%;
+	height:2px;
+	background:rgba(0,0,0,0.8);
+    margin:0 0 0 0;
+}
+
+.line2:after {
+  margin: 0 0 0 1.5rem;
+}
+
+.sponsor .body .credit .image {
+    display: flex;
+}
+
+.sponsor .body .credit .image img{
+    width: 20px;
+}
+
+@media screen and (max-width:1200px) {
+    .main-island .body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-island .body .text{
+        align-self: center;
+    }
+
+    .main-island .header {
+        text-align: center;
+    }
+}
