@@ -6,8 +6,11 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs')
 
 const indexRouter = require('./routes/index');
+const ttdRouter = require('./routes/ttd');
 
 app.use('/', indexRouter)
+
+app.use('/', ttdRouter)
 
 
 
