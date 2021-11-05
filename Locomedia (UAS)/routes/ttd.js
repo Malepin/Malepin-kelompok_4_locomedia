@@ -10,4 +10,16 @@ router.get('/cities', (req, res) => {
     res.render('pages/cities')
 })
 
+router.get('/fun', (req, res) => {
+    res.render('pages/fun')
+})
+
+router.get('/famousplaces', (req, res) => {
+    res.render('pages/famousplaces')
+})
+
+router.get('/shopping', (req, res) => {
+    res.render('pages/shopping')
+})
+
 module.exports = router;
