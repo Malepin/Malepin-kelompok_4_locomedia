@@ -1,0 +1,92 @@
+.title {
+    margin-top: 15px;
+}
+
+.innerbox {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.innerbox a{
+    text-decoration: none;
+    color: black;
+}
+
+.innerbox a :hover{
+    text-decoration: underline;
+    color: grey;
+}
+
+.content {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    text-align: left;
+    max-width: 1500px;
+}
+
+.content img {
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+}
+
+.maincontent {
+    margin: 10px;
+    display: block;
+    max-width: min-content;
+}
+
+.text {
+    text-align: left;
+    padding: 5px;
+}
+
+.rating img{
+    margin-top: -20px;
+    height: 28px;
+    width: 125px;
+    
+}
+
+.modal .modal-dialog .modal-content .modal-body .btn {
+    margin-bottom: 20px;
+    height: 50px;
+    width: 400px;
+    font-weight: 600;
+}
+
+.modal .modal-dialog .modal-content .modal-body .btn img {
+    height: 20px;
+}
+
+.modal .modal-dialog .modal-content .modal-body a:hover {
+    cursor: pointer;
+}
+
+.modal .modal-dialog .modal-content .modal-body .line2:before, .line2:after {
+  content:" ";
+    flex:1 0 0%;
+  height:2px;
+  background:rgba(0,0,0,0.8);
+    margin:0 0 0 0;
+}
+
+.modal .modal-dialog .modal-content .modal-body .line2:after {
+    margin:0 0 0 0;
+}
+
+@media screen and (max-width:1200px) {
+    .content{
+        display: inline-grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .content{
+        width: auto;
+        display: block;
+    }
+}
