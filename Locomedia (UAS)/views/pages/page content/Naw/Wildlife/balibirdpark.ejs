@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/universal.css">
+	
+    <title>Bali Bird Park</title>
+  </head>
+  <body>
+    <%- include('../layout/navbar.ejs'); %>
+    
+    <h1 class="title">Bali Bird Park</h1>
+
+    <div class="container_body">
+        <div class="about">
+            <h2>About</h2>
+            <p>
+                Enjoy walking around and get along with a thousand birds and its habitat. The Park is divided into seven regions that recreate the natural habitats of our birds, complete with indigenous plant life. You can travel from the deep misty jungle of Sumatra to Far East Indonesia and Papua to discover the native<span id="dots">...</span><span id="more">
+                birds from these remote regions. Venture to other tropical continents too. See the South American exotics such as the Golden Macaw and the Congo Grey Parrot from the African Savannah. Enter into their real living environment and see how they play with their colony, how they breed, and feel their happiness. You'll love them. Be entertained with 
+                our various bird shows and feeding activities and also many special programs made only for you. Take photos from lots of incredible scenes and taste the richness of local Balinese culinary and international cuisine from our fantastic menus in the restaurant.
+                </span>
+            </p>
+  
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+          
+            <p></p>
+            <p>Address&nbsp &nbsp:</p>
+          
+            <p>Jl. Serma Cok Ngurah Gambir Singapadu, Batubulan, Kec. Sukawati, Kabupaten Gianyar, Bali 80582</p>
+      
+            <div class="button-container">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#operationalhours">
+                Operational Hours
+                </button>
+            </div>
+  
+            <div class="modal fade" id="operationalhours" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <li>
+                                <ol>Monday : 09.00 - 17.30</ol>
+                                <ol>Tuesday : 09.00 - 17.30</ol>
+                                <ol>Wednesday : 09.00 - 17.30</ol>
+                                <ol>Thursday : 09.00 - 17.30</ol>
+                                <ol>Friday : 09.00 - 17.30</ol>
+                                <ol>Saturday : 09.00 - 17.30</ol>
+                                <ol>Sunday : 09.00 - 17.30</ol>
+                            </li>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+  
+            <p></p>
+            <p>Visit Web&nbsp &nbsp:</p>
+            <a href="https://www.balibirdpark.com/" target="_blank">Click Here</a>   
+        </div>
+      
+        <div class="container_frame">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/JXxbeIsYkn4" title="YouTube video player" >
+            </iframe>
+  
+            <div class="ticket">
+            <h4>Tickets</h4>
+            <h6>Indonesian ID :</h6>
+              <p>Bali ID  : <br>Rp 70.000</p>
+              <p>Indonesian ID : <br>Rp 100.000</p>
+            <h6>Overseas ID &nbsp&nbsp :</h6>
+              <p>Adult :<br> Rp 250.000</p>
+            </div> 
+        </div>
+      
+        <div class="info-container"> 
+            <div class="gmap_canvas">
+                <iframe height="325" width="300" class="map" src="https://maps.google.com/maps?q=bali%20bird&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div> 
+        </div>  
+    
+    </div>
+
+    <%- include('../layout/footer.ejs'); %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
+</html>

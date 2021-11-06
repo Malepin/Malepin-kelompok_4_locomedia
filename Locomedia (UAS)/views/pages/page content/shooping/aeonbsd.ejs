@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/universal.css">
+	
+    <title>AEON BSD</title>
+  </head>
+  <body>
+    <%- include('../layout/navbar.ejs'); %>
+    
+    <h1 class="title">AEON BSD</h1>
+
+    <div class="container_body">
+        <div class="about">
+            <h2>About</h2>
+            <p>
+            Shopping mall with home & fashion stores, a supermarket, an informal sushi restaurant & a cinema.
+            </p>
+          
+            <p>Address&nbsp &nbsp:</p>
+          
+            <p>Jl. BSD Raya Utama, Pagedangan, Kec. Pagedangan, Tangerang, Banten 15345</p>
+  
+            <p>Call&nbsp &nbsp:</p>
+  
+            <p>(021) 29168585</p>
+  
+            <div class="button-container">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#operationalhours">
+                Operational Hours
+                </button>
+            </div>
+  
+            <div class="modal fade" id="operationalhours" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <li>
+                                <ol>Monday : 10.00 - 21.00</ol>
+                                <ol>Tuesday : 10.00 - 21.00</ol>
+                                <ol>Wednesday : 10.00 - 21.00</ol>
+                                <ol>Thursday : 10.00 - 21.00</ol>
+                                <ol>Friday : 10.00 - 21.00</ol>
+                                <ol>Saturday : 10.00 - 21.00</ol>
+                                <ol>Sunday : 10.00 - 21.00</ol>
+                            </li>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+  
+            <p></p>
+            <p>Visit Web&nbsp &nbsp:</p>
+            <a href="https://aeonmall-bsdcity.com/en/index.php" target="_blank">Click Here</a>   
+        </div>
+      
+        <div class="container_frame">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/2at03_Tr9-U" title="YouTube video player" >
+            </iframe>
+  
+            <div class="ticket">
+                <p>Owner: Alphonzus Widjaja</p>
+                <p>Opened: May 30, 2015</p>
+                <p>Province: Banten</p>
+                <p>Number of stores and services: 300+</p>
+                <p>Total retail floor area: 100,000 m2 (1,076,391 sq ft) (The Complex); 77,000 m2 (828,821 sq ft)</p>
+                <p>No. of floors: 4 (Mall)</p>
+            </div> 
+        </div>
+      
+        <div class="info-container"> 
+            <div class="gmap_canvas">
+                <iframe height="325" width="300" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.6829207044943!2d106.6413259145893!3d-6.305325195436608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69faad1d959e1f%3A0xa02052b7ba6ab859!2sAEON%20Mall%20BSD!5e0!3m2!1sen!2sid!4v1632591187899!5m2!1sen!2sid" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div> 
+        </div>  
+    
+    </div>
+
+    <%- include('../layout/footer.ejs'); %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
+</html>

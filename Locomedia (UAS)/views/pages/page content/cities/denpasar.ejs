@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/universal.css">
+	
+    <title>Denpasar</title>
+  </head>
+  <body>
+    <%- include('../layout/navbar.ejs'); %>
+    
+    <h1 class="title">Denpasar</h1>
+
+    <div class="container_body">
+        <div class="about">
+            <h2>About</h2>
+            <p>
+                Denpasar is the capital city and main hub of the Indonesian province of Bali, in the southern part of the island. Laid-back Sanur Beach on the east coast offers sunrise views. The nearby Pura Blanjong Temple
+                <span id="dots">...</span><span id="more">
+                contains a stone pillar with a 10th-century inscription. The Bali Museum displays a large collection of Balinese cultural artifacts, including traditional costumes and religious items.
+                </span>
+            </p>
+  
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+          
+            <p></p>
+            <p>Province&nbsp &nbsp:</p>
+          
+            <p>&nbsp &nbspBali</p>
+      
+            <p></p>
+            <p>Visit Web&nbsp &nbsp:</p>
+            <a href="https://www.denpasarkota.go.id/" target="_blank" style="margin-left: 15px;">Click Here</a>   
+        </div>
+      
+        <div class="container_frame">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/pjrMHc87S4M" title="YouTube video player" >
+            </iframe>
+  
+            <div class="ticket">
+                <p>Area: 124 km²</p>
+                <p>Elevation: 4 m</p>
+                <p>Population: 897,300 (2017)</p>
+            </div> 
+        </div>
+      
+        <div class="info-container">
+  
+            <div class="gmap_canvas">
+                <iframe height="325" width="300" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119131.77980762372!2d115.15487394415644!3d-8.668600647707525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2409b0e5e80db%3A0xe27334e8ccb9374a!2sDenpasar%2C%20Denpasar%20City%2C%20Bali!5e0!3m2!1sen!2sid!4v1632587152783!5m2!1sen!2sid" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+  
+            <a class="weatherwidget-io" href="https://forecast7.com/en/n8d67115d21/denpasar/" data-label_1="DENPASAR" data-label_2="WEATHER" data-theme="original" >DENPASAR WEATHER</a>  
+        </div>  
+    
+    </div>
+
+    <%- include('../layout/footer.ejs'); %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
+</html>

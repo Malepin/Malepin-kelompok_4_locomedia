@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/universal.css">
+	
+    <title>Bali Zoo</title>
+  </head>
+  <body>
+    <%- include('../layout/navbar.ejs'); %>
+    
+    <h1 class="title">Bali Zoo</h1>
+
+    <div class="container_body">
+        <div class="about">
+            <h2>About</h2>
+            <p>
+                Bali's first and only zoological park is a wondrous place where you can learn the behavior of over 500 rare and exotic animals in a lush, tropical environment. A park where you can participate in fascinating animal adventure activities, some of which are unique experiences of <span id="dots">...</span><span id="more">
+                their kind in Indonesia.
+                </span>
+            </p>
+  
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+          
+            <p></p>
+            <p>Address&nbsp &nbsp:</p>
+          
+            <p>Singapadu, Sukawati, Gianyar, Bali 80582</p>
+      
+            <div class="button-container">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#operationalhours">
+                Operational Hours
+                </button>
+            </div>
+  
+            <div class="modal fade" id="operationalhours" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <li>
+                                <ol>Monday : 09.00 - 17.00</ol>
+                                <ol>Tuesday : 09.00 - 17.00</ol>
+                                <ol>Wednesday : 09.00 - 17.00</ol>
+                                <ol>Thursday : 09.00 - 17.00</ol>
+                                <ol>Friday : 09.00 - 17.00</ol>
+                                <ol>Saturday : 09.00 - 17.00</ol>
+                                <ol>Sunday : 09.00 - 17.00</ol>
+                            </li>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+  
+            <p></p>
+            <p>Visit Web&nbsp &nbsp:</p>
+            <a href="https://www.bali-zoo.com/" target="_blank">Click Here</a>   
+        </div>
+      
+        <div class="container_frame">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/YdbNRgepk4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+            </iframe>
+  
+            <div class="ticket">
+                <h4>Tickets</h4>
+                <h6>General Admission Ticket :</h6>
+                    <p>Adult : <br>Rp 252,000</p>
+                    <p>Childern : <br>Rp 355,500</p>
+                <h6>Half-Day Bali Zoo Explorer with Lunch and Transfers :</h6>
+                    <p>Adult : <br>Rp 738,000</p>
+                    <p>Childern : <br>Rp 517,500</p>
+                <h6>Exclusive Elephant Expedition (20 minutes) :</h6>
+                    <p>Adult : <br>p 1,399,500</p>
+                    <p>Childern : <br>Rp 981,000</p>
+                <h6>Elephant Expedition (20 Minutes) :</h6>
+                    <p>Adult : <br>Rp 999,000</p>
+                    <p>Childern : <br>Rp 702,000</p>
+                <h6>Promo Elephant Mud Fun (Afternoon Session) :</h6>
+                    <p>Adult : <br>Rp 997,500</p>
+                    <p>Childern : <br>Rp 997,500</p>
+                <h6>Promo Elephant Mud Fun (Morning Session) :</h6>
+                    <p>Adult : <br>Rp 997,500</p>
+                    <p>Childern : <br>Rp 997,500</p>
+            </div>  
+        </div>
+      
+        <div class="info-container">      
+            <div class="gmap_canvas">
+                <iframe width="300" height="325" id="map" src="https://maps.google.com/maps?q=bali%20zoo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>  
+        </div>  
+    
+    </div>
+
+    <%- include('../layout/footer.ejs'); %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
+</html>
