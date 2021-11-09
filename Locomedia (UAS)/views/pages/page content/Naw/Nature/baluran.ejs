@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/universal.css">
+	
+    <title>Baluran National Park</title>
+  </head>
+  <body>
+    <%- include('../layout/navbar.ejs'); %>
+    
+    <h1 class="title">Baluran National Park</h1>
+
+    <div class="container_body">
+        <div class="about">
+            <h2>About</h2>
+            <p>
+                Baluran National Park is located in Situbondo Regency, East Java, Indonesia. It has a relatively dry climate and mainly consists of savanna, as well as lowland forests, mangrove forests and hills, with Mount Baluran as its highest peak.
+                </span>
+            </p>
+          
+            <p>Address&nbsp &nbsp:</p>
+          
+            <p>Area Hutan/Kebun, Sumberwaru, Banyuputih, Situbondo Regency, East Java</p>
+  
+            <p>Call&nbsp &nbsp:</p>
+  
+            <p>(0333) 461936</p>
+      
+            <div class="button-container">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#operationalhours">
+                Operational Hours
+                </button>
+            </div>
+  
+            <div class="modal fade" id="operationalhours" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <li>
+                                <ol>Monday : 07.30 - 16.00</ol>
+                                <ol>Tuesday : 07.30 - 16.00</ol>
+                                <ol>Wednesday : 07.30 - 16.00</ol>
+                                <ol>Thursday : 07.30 - 16.00</ol>
+                                <ol>Friday : 07.30 - 16.00</ol>
+                                <ol>Saturday : 07.30 - 16.00</ol>
+                                <ol>Sunday : 07.30 - 16.00</ol>
+                            </li>
+                        </div>
+                    </div>
+                </div>          
+            </div>
+  
+            <p></p>
+            <p>Visit Web&nbsp &nbsp:</p>
+                <a href="https://balurannationalpark.id/" target="_blank">Click Here</a>   
+        </div>
+      
+        <div class="container_frame">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/BqMBG9iemxI" title="YouTube video player" >
+            </iframe>
+  
+            <div class="ticket">
+                <p>Province: East Java</p>
+                <p>Area: 250 km²</p>
+                <p>Established: 1980</p>
+                <p>Management: Ministry of Environment and Forestry of The Republic of Indonesia</p>
+            </div>  
+        </div>
+      
+        <div class="info-container">     
+            <div class="gmap_canvas">
+                <iframe height="325" width="300" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.608549557933!2d114.38536181459862!3d-7.831188394357179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1249454d7c085%3A0x67067c7ed3eced4b!2sBaluran%20National%20Park!5e0!3m2!1sen!2sid!4v1632595596883!5m2!1sen!2sid" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div> 
+        </div>  
+    
+    </div>
+
+    <%- include('../layout/footer.ejs'); %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  </body>
+</html>
