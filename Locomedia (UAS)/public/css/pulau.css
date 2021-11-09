@@ -1,0 +1,39 @@
+.cards3 .card a{
+    text-decoration: none;
+    color: black;
+}
+
+.cards3{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5%;
+}
+
+.cards3 .card{
+    margin-right: 1%;
+    margin-left: 1%;
+    width: 70%;
+    height: 18rem;
+}
+
+.cards3 .card img{
+    height: 14rem;
+}
+
+.text{
+  font-size: 1em;
+}
+@media screen and (max-width:1200px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .text p{
+    text-align: center;
+  }
+}
