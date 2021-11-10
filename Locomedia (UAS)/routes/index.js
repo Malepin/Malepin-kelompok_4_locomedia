@@ -26,4 +26,8 @@ router.get('/papua', (req, res) => {
     res.render('pages/papua');
 })
 
+router.get('/ttd', (req,res) => {
+    res.render('pages/ttd');
+})
+
 module.exports = router;
