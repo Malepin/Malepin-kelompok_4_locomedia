@@ -1,0 +1,50 @@
+.container {
+    border: solid red;
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: 5px;
+}
+
+.subcontainer {
+    border: solid yellow;
+    width: 100%;
+}
+
+.about {
+    border: solid;
+    padding: 5px;
+    width: 50%;
+}
+
+.vidcon {
+    border: solid blue;
+    height: 448px;
+    width: 747px;
+    margin: auto;
+}
+
+.responsive-iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.infocon {
+    border: solid blue;
+    display: flex;
+    height: 40%;
+}
+
+.ticket {
+    border: solid;
+    
+}
+
+.infocon #carouselExampleIndicators .carousel-inner .carousel-item img{
+    width: 250px;
+    height: 250px;
+}
+
+p {
+    font-size: 18px;
+}
