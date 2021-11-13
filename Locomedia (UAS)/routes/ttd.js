@@ -6,8 +6,8 @@ router.get('/naw', (req, res) => {
     res.render('pages/naw');
 })
 
-router.get('/cities', (req, res) => {
-    res.render('pages/cities')
+router.get('/beaches', (req, res) => {
+    res.render('pages/beaches')
 })
 
 router.get('/fun', (req, res) => {
