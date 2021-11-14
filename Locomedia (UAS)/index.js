@@ -19,6 +19,7 @@ const kalimantanRouter = require('./routes/kalimantan')
 const sumateraRouter = require('./routes/sumatera')
 const sulawesiRouter = require('./routes/sulawesi')
 const papuaRouter = require('./routes/papua')
+const artikelRouter = require('./routes/artikel')
 
 app.use('/', indexRouter,)
 
@@ -43,6 +44,8 @@ app.use('/', sumateraRouter);
 app.use('/', sulawesiRouter);
 
 app.use('/', papuaRouter);
+
+app.use('/', artikelRouter);
 
 
 app.listen(3000, ()=> {
