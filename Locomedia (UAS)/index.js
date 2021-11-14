@@ -36,13 +36,13 @@ app.use('/', famousplacesRouter);
 
 app.use('/', jawaRouter);
 
-app.use('/', kalimantanRouter);
+//app.use('/', kalimantanRouter);
 
-app.use('/', sumateraRouter);
+//app.use('/', sumateraRouter);
 
-app.use('/', sulawesiRouter);
+//app.use('/', sulawesiRouter);
 
-app.use('/', papuaRouter);
+//app.use('/', papuaRouter);
 
 
 app.listen(3000, ()=> {
