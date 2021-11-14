@@ -30,4 +30,48 @@ router.get('/ttd', (req,res) => {
     res.render('pages/ttd');
 })
 
+
+
+
+
+
+
+
+router.get('/jawatimur', (req, res) => {
+    res.render('pages/jawatimur');
+})
+
+router.get('/jawatengah', (req, res) => {
+    res.render('pages/jawatengah');
+})
+
+
+
+
+
+
+
+router.get('/kalimantanbarat', (req, res) => {
+    res.render('pages/kalimantanbarat');
+})
+
+router.get('/kalimantanselatan', (req, res) => {
+    res.render('pages/kalimantanselatan');
+})
+
+router.get('/kalimantantengah', (req, res) => {
+    res.render('pages/kalimantantengah');
+})
+
+router.get('/kalimantantimur', (req, res) => {
+    res.render('pages/kalimantantimur');
+})
+
+router.get('/kalimantanutara', (req, res) => {
+    res.render('pages/kalimantanutara');
+})
+
+
+
+
 module.exports = router;
