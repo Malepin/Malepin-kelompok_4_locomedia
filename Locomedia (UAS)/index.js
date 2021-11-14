@@ -14,6 +14,7 @@ const shoppingRouter = require('./routes/shopping')
 const nawRouter = require('./routes/naw')
 const funRouter = require('./routes/fun')
 const famousplacesRouter = require('./routes/famousplaces')
+const jawaRouter = require('./routes/jawa')
 
 app.use('/', indexRouter,)
 
@@ -28,6 +29,8 @@ app.use('/', nawRouter);
 app.use('/', funRouter);
 
 app.use('/', famousplacesRouter);
+
+app.use('/', jawaRouter);
 
 
 app.listen(3000, ()=> {
