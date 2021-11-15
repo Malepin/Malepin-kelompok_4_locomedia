@@ -1,11 +1,22 @@
 const express = require('express')
-
+const bodyparser = require('body-parser')
+const session = require('express-session')
 const app = express()
 
 app.use(express.static('public'))
 app.set('view engine', 'ejs' )
+app.use(bodyparser.urlencoded({extended: false}))
+app.use(bodyparser.json())
 
-const account = require("./model/account");
+app.use(session({
+    secret: 'som3_secret_keys',
+    cookie: {}
+}))
+
+app.use((req, res, next) => {
+    res.locals.isLoggedIn = req.session.isLoggedIn;
+    next();
+})
 
 const indexRouter = require('./routes/index');
 const ttdRouter = require('./routes/ttd');
@@ -20,6 +31,7 @@ const sumateraRouter = require('./routes/sumatera')
 const sulawesiRouter = require('./routes/sulawesi')
 const papuaRouter = require('./routes/papua')
 const artikelRouter = require('./routes/artikel')
+const { cookie } = require('express-validator')
 
 app.use('/', indexRouter,)
 

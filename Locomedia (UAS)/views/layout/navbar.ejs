@@ -43,12 +43,20 @@
             <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
           </a>
           <div class="button-container">
+            <% if (locals.isLoggedIn) { %>
+            <a href="logout">
+              <button type="button" class="btn" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
+                Logout
+              </button>
+            </a>
+            <% } else { %>
             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
               Login
             </button>
             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
               Register
             </button>
+            <% } %>
           </div>
 
           <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -60,15 +68,15 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form method="post" action="/">
                     <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Welcome back.</h3>
                     <div class="mx-auto col-11" style="justify-content: center;">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                     </div>
                     <div class="mx-auto col-11" style="justify-content: center;">
                       <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                       <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal4" style="margin-top: 20px; color: black;"><br> Forgot Password?</a>
                     </div>
                     <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
@@ -108,25 +116,25 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form method="post" action="/">
                     <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Join now.</h3>
                     <div class="row g-2 col-11 mx-auto">
                       <div class="mx-auto col-sm-6" style="justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">First Name</label>
-                        <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
+                        <input name="firstname" type="text" class="form-control" placeholder="First Name" aria-label="First Name">
                       </div>
                       <div class="mx-auto col-sm" style="justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                        <input name="lastname" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
                       </div>
                     </div>
                     <div class="mx-auto col-11" style="justify-content: center;">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                     </div>
                     <div class="mx-auto col-11" style="justify-content: center;">
                       <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
                     <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
                       <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Join</button>
