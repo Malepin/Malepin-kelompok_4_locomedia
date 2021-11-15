@@ -29,10 +29,17 @@
     border: solid rgba(128, 128, 128, 0.123);
     border-radius: 15px;
     padding: 20px;
-    width: 50%;
+    width: 100%;
     height: 450px;
     margin-right: 10px;
     overflow: auto;
+}
+
+.smlinfo {
+    display: block;
+    height: 50%;
+    overflow: auto;
+    padding: 20px;
 }
 
 .vidcon {
@@ -49,8 +56,7 @@
 .infocon {
     display: flex;
     height: 38%;
-    width: 88.2%;
-    margin-left: 50px;
+    width: 100%;
 }
 
 .infocon #carouselExampleIndicators .carousel-inner .carousel-item img{
@@ -63,6 +69,10 @@ p {
 }
 
 #more {display: none;}
+
+.modal-header li{
+    list-style: none;
+}
 
 @media screen and (max-width:1200px) {
     .container {
@@ -78,15 +88,15 @@ p {
     .infocon {
         width: 100%;
         position: relative;
-        margin: 10px 0 0 0;
-        display: block;
+        margin: 15px 0 0 0;
+        display: flex;
     }
 
     .vidcon{
         width: 100%;
         position: relative;
         margin: 0;
-        display: flex;        
+        display: flex;       
     }
 
     .responsive-iframe{
@@ -97,11 +107,26 @@ p {
     }
 
     .infocon #carouselExampleIndicators .carousel-inner .carousel-item img{
-        width: 100%;
+        width: 500px;
         height: 400px;
     }
 
-    .gmaps {
+    .map {
+        height: 400px;
+        width: 500px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .infocon {
+        display: block;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    .infocon #carouselExampleIndicators .carousel-inner .carousel-item img{
         width: 100%;
     }
 }

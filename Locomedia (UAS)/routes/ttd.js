@@ -26,4 +26,16 @@ router.get('/bandung', (req, res) => {
     res.render('pages/bandung')
 })
 
+router.get('/jakarta', (req, res) => {
+    res.render('pages/jakarta')
+})
+
+router.get('/ubud', (req, res) => {
+    res.render('pages/ubud')
+})
+
+router.get('/yogyakarta', (req, res) => {
+    res.render('pages/yogyakarta')
+})
+
 module.exports = router;
