@@ -22,4 +22,8 @@ router.get('/shopping', (req, res) => {
     res.render('pages/shopping')
 })
 
+router.get('/bandung', (req, res) => {
+    res.render('pages/bandung')
+})
+
 module.exports = router;
