@@ -3,7 +3,24 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    res.render('pages/index', { name: 'Mathew'});
+    res.render('pages/index');
+})
+
+router.post('/', (req, res) =>{
+    const email = req.body.email;
+    const password = req.body.password;
+    
+    if (email == "mathew@gmail.com" && password == "123"){
+        req.session.isLoggedIn = true;
+        res.redirect('/')
+    } else {
+        res.render('pages/sumatera')
+    }
+})
+
+router.get('/logout', (req, res) =>{
+    req.session.isLoggedIn = false;
+    res.redirect('/');
 })
 
 router.get('/jawa', (req, res) => {
@@ -29,5 +46,7 @@ router.get('/papua', (req, res) => {
 router.get('/ttd', (req,res) => {
     res.render('pages/ttd');
 })
+
+
 
 module.exports = router;

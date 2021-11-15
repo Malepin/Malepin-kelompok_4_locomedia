@@ -3,7 +3,7 @@ const express = require('express')
 const router = express.Router()
 
 router.get('/bandung', (req, res) => {
-    res.render('pages/cities/bandung')
+    res.render('pages/bandung')
 })
 
 router.get('/denpasar', (req, res) => {

@@ -43,39 +43,20 @@
             <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
           </a>
           <div class="button-container">
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
-              Sign in
+            <% if (locals.isLoggedIn) { %>
+            <a href="logout">
+              <button type="button" class="btn" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
+                Logout
+              </button>
+            </a>
+            <% } else { %>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
+              Login
             </button>
-          </div>
-
-          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <img src="/image/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
-                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <div class="d-grid gap-2 col-8 mx-auto" style="justify-content: center; margin-top: 10%; margin-bottom: 10%;">
-                    <button class="btn" type="button" style="border: solid black; border-radius: 25px;;">
-                      <img src="/image/icon/google.png" alt="" style="width: 20px; float: left; margin-left: 20px;">
-                      Continue With Google
-                    </button>
-                    <button class="btn" type="button" style="border: solid black; border-radius: 25px;">
-                      <img src="/image/icon/Facebook.svg" alt="" style="width: 20px; float: left; margin-left: 20px;">
-                      Continue With Facebook
-                    </button>
-                    <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: solid black; border-radius: 25px;">
-                      <img src="/image/icon/mail_outline_black_24dp.svg" alt="" style="width: 20px; float: left; margin-left: 20px;">
-                      Continue With Email
-                    </button>
-                  </div>           
-                </div>
-                <div class="modal-footer">
-                </div>
-              </div>
-            </div>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
+              Register
+            </button>
+            <% } %>
           </div>
 
           <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -87,15 +68,15 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form method="post" action="/">
                     <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Welcome back.</h3>
                     <div class="mx-auto col-11" style="justify-content: center;">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                     </div>
                     <div class="mx-auto col-11" style="justify-content: center;">
                       <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                       <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal4" style="margin-top: 20px; color: black;"><br> Forgot Password?</a>
                     </div>
                     <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
@@ -112,6 +93,10 @@
                       <button class="btn" type="button" style="border: solid black; border-radius: 25px;">
                         <img src="/image/icon/Facebook.svg" alt="" style="width: 20px; float: left; margin-left: 20px;">
                         Continue With Facebook
+                      </button>
+                      <button class="btn" type="button" style="border: solid black; border-radius: 25px;">
+                        <img src="/image/icon/twitter.svg" alt="" style="width: 20px; float: left; margin-left: 20px;">
+                        Continue With Twitter
                       </button>
                     </div>
                   </form>
@@ -131,37 +116,30 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form method="post" action="/">
                     <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Join now.</h3>
                     <div class="row g-2 col-11 mx-auto">
                       <div class="mx-auto col-sm-6" style="justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">First Name</label>
-                        <input type="text" class="form-control" placeholder="First Name" aria-label="First Name">
+                        <input name="firstname" type="text" class="form-control" placeholder="First Name" aria-label="First Name">
                       </div>
                       <div class="mx-auto col-sm" style="justify-content: center;">
                         <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                        <input name="lastname" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
                       </div>
                     </div>
                     <div class="mx-auto col-11" style="justify-content: center;">
                       <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
                     </div>
                     <div class="mx-auto col-11" style="justify-content: center;">
                       <label for="exampleInputPassword1" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
                     <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
                       <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Join</button>
                     </div>
                   </form>
-                  
-                  <div class="line2" style="margin-top: 10px;">
-                    <h5 style="color: black; text-decoration: none; text-shadow: none; width: 40%; margin: auto; font-size: 17px; text-align: center;">Already a member?</h5>
-                  </div>
-                  <div class="join" style="text-align: center;">
-                    <a data-bs-toggle="modal" data-bs-target="#exampleModal2" class="" style="color: black;">Sign in</a>
-                  </div>
                 </div>
                 <div class="modal-footer">
                 </div>

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/pulau.css">
+
+    <style>
+        .text{
+  font-size: 1em;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --grid-column-gap: 20px;
+}
+
+
+.carouselPre{
+    grid-auto-flow: column;
+    display: grid;
+    grid-auto-columns: calc((100% - 3 * var(--grid-column-gap))/ 4);
+    grid-column-gap: var(--grid-column-gap);
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    list-style: none;
+    scroll-behavior: smooth;
+    margin-right:5%;
+    margin-left: 5%;
+}
+
+#title{
+    margin: 10px 10px 10px 0;
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.topT{
+    border-top: 1px solid rgb(212, 212, 212);
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.itemsC .textDet{
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+}
+
+.contents{
+    color: white;
+}
+
+.itemsC .contents p{    
+    -webkit-line-clamp: 3;
+    text-align: center;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    width: 90%;
+    margin: auto;
+}
+
+.leftTxtDet{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 33px;
+}
+
+.itemsC{
+    position: relative;
+}
+
+.scrolly{
+    overflow: hidden;
+}
+
+.carouselPre li{
+    scroll-snap-align: start;
+    width: 16rem;
+    height: 23rem;
+    background-color: royalblue;
+    list-style: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.carouselPre li .bgImg{
+    width: 100%;
+    height: 100%;
+}
+
+.carouselPre li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scrolly{
+    position: relative;
+}
+
+#left,#right{
+    background-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+    border: transparent;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-60%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+#left{
+    left: 0;
+}
+
+#right{
+    right: 0;
+}
+@media screen and (max-width:1200px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .text p{
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+    .carouselPre {
+        grid-auto-columns: calc((100% - 2 * var(--grid-column-gap))/ 3);
+        height: 23rem;
+    }
+  }
+
+@media only screen and (max-width: 660px) {
+    .carouselPre {
+        grid-auto-columns: calc((100% - 1 * var(--grid-column-gap))/ 2);
+        height: 25rem;
+    }
+  }
+
+@media only screen and (max-width: 440px) {
+    .carouselPre {
+        grid-auto-columns: 100%;
+        height: 25rem;
+    }
+  }
+
+
+::-webkit-scrollbar {    
+  width: 15px;
+height: 15px;
+border-left: #ededed solid 1px;
+background-color: #fcfcfc;
+border-top: #ededed solid 1px;
+    }
+
+::-webkit-scrollbar-thumb:hover{
+cursor: pointer;
+background: #c7c7c7;
+width: 15px;
+    background-clip: content-box;
+    border: 4px solid transparent;
+border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-button {   
+ display: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+background: #dbdbdb;
+    background-clip: content-box;
+    border: 4px solid transparent;
+border-radius: 10px;
+
+    }
+
+
+    .modal .modal-dialog .modal-content .modal-body .btn {
+        margin-bottom: 20px;
+        height: 50px;
+        width: 400px;
+        font-weight: 600;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body .btn img {
+        height: 20px;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body a:hover {
+        cursor: pointer;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body .line2:before, .line2:after {
+      content:" ";
+        flex:1 0 0%;
+      height:2px;
+      background:rgba(0,0,0,0.8);
+        margin:0 0 0 0;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body .line2:after {
+        margin:0 0 0 0;
+    }
+    </style>
+    
+  </head>
+  <body>
+    <%- include('../layout/navbar.ejs'); %>
+
+    <div class="body" style="margin-left:5%; margin-right:5%;">      
+
+        <div class="judul"style="display:flex; margin-left:2%;">
+          <h1 style="text-align: left;font-size: 4em;color:red ">Explore</h1>
+          <h1 style="text-align: left;font-size: 4em;">Sulawesi Utara</h1>
+        </div>
+          
+      
+          
+      
+        <div class="gambar" style="display: flex;justify-content: center;margin: 15px;">
+          <div class="gambar-besar">
+              <img src="/image/00pulau kecil/sulawesi/utara/gede1.webp" alt="" height="500px">
+          </div>
+          <div class="gambar-kecil" style="display: flex;flex-direction: column;">
+                <img src="/image/00pulau kecil/sulawesi/utara/kecil 1.jpg" alt="" style="height: 250px; width: 500px;">
+                <img src="/image/00pulau kecil/sulawesi/utara/kecil 2.jfif" alt="" style="height: 250px; width: 500px;">
+          </div>
+      </div>
+      
+              
+              
+              
+            </div><!--penutupan div gambar-->
+      
+            <div class="container"style="display:flex; align-items:center; margin-top:10%; width: 80%; margin-bottom:10%;">
+              <div class="text" style="flex-basis: 70%;text-align: left; margin-right: 5%;">
+               
+               <h1 style="font-size: 3rem; text-align: center; font-weight: 700;">
+                   Tentang Sulawesi Utara
+                   </h1>
+               <p>
+                  Sulawesi Utara (disingkat Sulut) adalah salah satu provinsi yang terletak di ujung utara Pulau Sulawesi, Indonesia, dengan ibu kota terletak di kota Manado. Sulawesi Utara atau Sulut berbatasan dengan Laut Maluku dan Samudera Pasifik di sebelah timur, Laut Maluku dan Teluk Tomini di sebelah selatan, Laut Sulawesi dan provinsi Gorontalo di sebelah barat, dan provinsi Davao del Sur (Filipina) di sebelah utara. Penduduk Sulawesi Utara pada tahun 2021 berjumlah 2.655.970 jiwa, dan luas wilayahnya adalah 13.892,47 km2
+          </p>
+              </div><!--penutupan div text-->
+              <div class="gmap_canvas"style="flex-basis: 30%; margin-left:5%; ">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4080245.158705613!2d122.90053398786246!3d2.9266653887222938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287754270069e31%3A0x45891617980cb835!2sSulawesi%20Utara!5e0!3m2!1sid!2sid!4v1632706927775!5m2!1sid!2sid" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+      
+            </div><!--penutupan div container-->
+      
+      
+       
+         
+              <h1 id="title" style="text-align: center;">DESTINATION</h1>
+          
+              <div class="scrolly">
+                 
+                <ul class="carouselPre">
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Pulau Lihaga</h1>
+                          <div class="textDet" style="background-color: black"><p>Hamparan pasir putih bersih yang dikelilingi air biru jernih yang membuat menenangkan pikiran</p></div>
+                      </div>
+                      <a href="https://www.celebes.co/pulau-lihaga">
+                      <div class="bgImg"><img src="/image/00pulau kecil/sulawesi/utara/d1 Pulau Lihaga.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Pulau Lembeh</h1>
+                          <div class="textDet" style="background-color: black"><p>banyaknya spot diving untuk melihat keindahan bawah laut Pulau Lembeh yang tiada duanya.</p></div>
+                      </div>
+                      <a href="https://www.celebes.co/pulau-lembeh-bitung">
+                      <div class="bgImg"><img src="/image/00pulau kecil/sulawesi/utara/d2 Pulau Lembeh.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Batu Dinding Kilo 3</h1>
+                          <div class="textDet" style="background-color: black"><p>Bagi kamu yang gemar olahraga ekstrem seperti panjat tebing, kami rasa tak ada salahnya untuk menjajal olahraga disini.</p></div>
+                      </div>
+                      <a href="https://ksmtour.com/informasi/tempat-wisata/sulawesi-utara/batu-dinding-kilo-tiga-jalur-pemanjatan-tersulit-di-sulawesi-utara.html">
+                      <div class="bgImg"><img src="/image/00pulau kecil/sulawesi/utara/d3 Batu Dinding Kilo 3.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                 
+              </ul>
+          </div>
+          <h1 id="title">FOOD</h1>
+          
+          
+              <div class="scrolly">
+                  
+                <ul class="carouselPre">
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Abang Kepiting Restaurant</h1>
+                          <div class="textDet" style="background-color: black"><p>Banyak pilihan dengan cita rasa makanan yang berbeda untuk yang suka seafood.</p></div>
+                      </div>
+                      <a href="https://vymaps.com/ID/Abang-Kepiting-1695681/">
+                      <div class="bgImg"><img src="/img/00pulau kecil/kalimantan/kalimantan barat/makanan 1 abang kepiting.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Mietiau Apollo</h1>
+                          <div class="textDet" style="background-color: black"><p>Mie Tiaw Apollo Pontianak termasuk salah satu kuliner legendaris menemani pelanggannya dari tahun 1968an</p></div> 
+                      </div>
+                      <a href="https://travelingyuk.com/mie-tiaw-apollo-pontianak/202718">
+                      <div class="bgImg"><img src="/img/00pulau kecil/kalimantan/kalimantan barat/makanan 2 kwetiau appolo.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Nasi Akwang</h1>
+                          <div class="textDet" style="background-color: black"><p>salah satu Nasi Campur terenak senusantara, Nasi Campur Akwang di Pontianak.</p></div>
+                      </div>
+                      <a href="https://vymaps.com/ID/Nasi-Akwang-4622391/">
+                      <div class="bgImg"><img src="/img/00pulau kecil/kalimantan/kalimantan barat/makanan 3 nasi akwang.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                 
+          
+              </ul>
+          </div>
+          
+          
+      
+            
+              
+      
+          </div><!-- penutupan div body-->
+
+    <%- include('../layout/footer.ejs'); %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>

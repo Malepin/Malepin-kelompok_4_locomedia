@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/pulau.css">
+
+    <style>
+        .text{
+  font-size: 1em;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+:root {
+    --grid-column-gap: 20px;
+}
+
+
+.carouselPre{
+    grid-auto-flow: column;
+    display: grid;
+    grid-auto-columns: calc((100% - 3 * var(--grid-column-gap))/ 4);
+    grid-column-gap: var(--grid-column-gap);
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    list-style: none;
+    scroll-behavior: smooth;
+    margin-right:5%;
+    margin-left: 5%;
+}
+
+#title{
+    margin: 10px 10px 10px 0;
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.topT{
+    border-top: 1px solid rgb(212, 212, 212);
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.itemsC .textDet{
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+}
+
+.contents{
+    color: white;
+}
+
+.itemsC .contents p{    
+    -webkit-line-clamp: 3;
+    text-align: center;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    font-size: 12px;
+    line-height: 1.25;
+    font-weight: 400;
+    width: 90%;
+    margin: auto;
+}
+
+.leftTxtDet{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 33px;
+}
+
+.itemsC{
+    position: relative;
+}
+
+.scrolly{
+    overflow: hidden;
+}
+
+.carouselPre li{
+    scroll-snap-align: start;
+    width: 16rem;
+    height: 23rem;
+    background-color: royalblue;
+    list-style: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.carouselPre li .bgImg{
+    width: 100%;
+    height: 100%;
+}
+
+.carouselPre li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.scrolly{
+    position: relative;
+}
+
+#left,#right{
+    background-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+    border: transparent;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-60%);
+    cursor: pointer;
+    z-index: 2;
+}
+
+#left{
+    left: 0;
+}
+
+#right{
+    right: 0;
+}
+@media screen and (max-width:1200px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .text p{
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 890px) {
+    .carouselPre {
+        grid-auto-columns: calc((100% - 2 * var(--grid-column-gap))/ 3);
+        height: 23rem;
+    }
+  }
+
+@media only screen and (max-width: 660px) {
+    .carouselPre {
+        grid-auto-columns: calc((100% - 1 * var(--grid-column-gap))/ 2);
+        height: 25rem;
+    }
+  }
+
+@media only screen and (max-width: 440px) {
+    .carouselPre {
+        grid-auto-columns: 100%;
+        height: 25rem;
+    }
+  }
+
+
+::-webkit-scrollbar {    
+  width: 15px;
+height: 15px;
+border-left: #ededed solid 1px;
+background-color: #fcfcfc;
+border-top: #ededed solid 1px;
+    }
+
+::-webkit-scrollbar-thumb:hover{
+cursor: pointer;
+background: #c7c7c7;
+width: 15px;
+    background-clip: content-box;
+    border: 4px solid transparent;
+border-radius: 10px;
+}
+
+    ::-webkit-scrollbar-button {   
+ display: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+background: #dbdbdb;
+    background-clip: content-box;
+    border: 4px solid transparent;
+border-radius: 10px;
+
+    }
+
+
+    .modal .modal-dialog .modal-content .modal-body .btn {
+        margin-bottom: 20px;
+        height: 50px;
+        width: 400px;
+        font-weight: 600;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body .btn img {
+        height: 20px;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body a:hover {
+        cursor: pointer;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body .line2:before, .line2:after {
+      content:" ";
+        flex:1 0 0%;
+      height:2px;
+      background:rgba(0,0,0,0.8);
+        margin:0 0 0 0;
+    }
+
+    .modal .modal-dialog .modal-content .modal-body .line2:after {
+        margin:0 0 0 0;
+    }
+    </style>
+    
+  </head>
+  <body>
+    <%- include('../layout/navbar.ejs'); %>
+
+    <div class="body" style="margin-left:5%; margin-right:5%;">      
+
+        <div class="judul"style="display:flex; margin-left:2%;">
+          <h1 style="text-align: left;font-size: 4em;color:red ">Explore</h1>
+          <h1 style="text-align: left;font-size: 4em;">Jawa Barat</h1>
+        </div>
+          
+      
+          
+      
+        <div class="gambar" style="display: flex;justify-content: center;margin: 15px;">
+          <div class="gambar-besar">
+              <img src="/image/00pulau kecil/kalimantan/kalimantan tegah/gambar gede.jpg" alt="" height="500px">
+          </div>
+          <div class="gambar-kecil" style="display: flex;flex-direction: column;">
+                <img src="/image/00pulau kecil/kalimantan/kalimantan tegah/gambar kecil 1.jpg" alt="" style="height: 250px; width: 500px;">
+                <img src="/image/00pulau kecil/kalimantan/kalimantan tegah/gambar kecil.jpg" alt="" style="height: 250px; width: 500px;">
+          </div>
+      </div>
+      
+              
+              
+              
+            </div><!--penutupan div gambar-->
+      
+            <div class="container"style="display:flex; align-items:center; margin-top:10%; width: 80%; margin-bottom:10%;">
+              <div class="text" style="flex-basis: 70%;text-align: left; margin-right: 5%;">
+               
+               <h1 style="font-size: 3rem; text-align: center; font-weight: 700;">
+                Tentang Kalimantan Tengah
+              </h1>
+                 <p>
+                   Provinsi Kalimantan Tengah terletak di tengah gugus kepulauan Indonesia. Sebagai provinsi terluas kedua di Indonesia, daerah ini mentimpan sejuta pesona. Mulai dari alam, orang utan, hingga kehidupan penduduk asli suku Datak yang lengkap dengan upacara adat hingga kisah kepahlawanan Tjilik Riwut.
+               </p>
+              </div><!--penutupan div text-->
+              <div class="gmap_canvas"style="flex-basis: 30%; margin-left:5%; ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4084392.8144120653!2d111.04711477765976!3d-1.377759064816839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de2bfb286bc963f%3A0xcfdbd56783f56bae!2sKalimantan%20Tengah!5e0!3m2!1sid!2sid!4v1632649410961!5m2!1sid!2sid" width="500" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+      
+      
+            </div><!--penutupan div container-->
+      
+      
+       
+         
+              <h1 id="title" style="text-align: center;">DESTINATION</h1>
+          
+              <div class="scrolly">
+                 
+                <ul class="carouselPre">
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Pantai Ujung Pandaran</h1>
+                          <div class="textDet" style="background-color: black"><p>salah satu pantai yang sangat apik. Salah satu pantai yang bisa untuk Anda singgahi untuk melihat matahari terbenam.</p></div>
+                      </div>
+                      <a href="https://www.celebes.co/borneo/pantai-ujung-pandaran">
+                      <div class="bgImg"><img src="/image/00pulau kecil/kalimantan/kalimantan tegah/destinasi 1 pantai ujung pandaran.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Istana Kuning</h1>
+                          <div class="textDet" style="background-color: black"><p>Istana Kuning telah menjadi salah satu wisata daerah yang istimewa. Istana ini didirikan pangeran ke-9 dari Kerajaan Kutaringin.</p></div>
+                      </div>
+                      <a href="https://ksmtour.com/informasi/tempat-wisata/kalimantan-tengah/istana-kuning-wisata-sejarah-yang-indah-di-kalimantan-tengah.html">
+                      <div class="bgImg"><img src="/image/00pulau kecil/kalimantan/kalimantan tegah/destinasi 3 istana kuning.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Museum Balanga</h1>
+                          <div class="textDet" style="background-color: black"><p> Museum ini dulunya Gedung Monumen Dewan Nasional dan tugasnya sebagai pengembangan pendidikan Suku Dayak</p></div>
+                      </div>
+                      <a href="https://mmc.kalteng.go.id/berita/read/1941/sejarah-bangunan-museum-balanga">
+                      <div class="bgImg"><img src="/image/00pulau kecil/kalimantan/kalimantan tegah/destinasi 2 museum balanga.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Taman Nasionel Tanjung Puting</h1>
+                          <div class="textDet" style="background-color: black"><p>Kawasan Tanjung Puting merupakan salah satu daerah konservasi pertama yang ada di Indonesia untuk melindungi Orang Hutan.</p></div>
+                      </div>
+                      <a href="https://www.nativeindonesia.com/taman-nasional-tanjung-puting/">
+                      <div class="bgImg"><img src="/image/00pulau kecil/kalimantan/kalimantan tegah/destinasi 4 tanjung puting.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Taman Kumkum</h1>
+                          <div class="textDet" style="background-color: black"><p>Taman Wisata Kumkum disebut sebagai kebun binatang kecil karena terdapat beberapa binatang yang menghuni tempat ini. </p></div>
+                      </div>
+                      <a href="https://utiket.com/id-id/obyek-wisata/palangkaraya/139-taman_wisata_kumkum.html">
+                      <div class="bgImg"><img src="/image/00pulau kecil/kalimantan/kalimantan tegah/destinasi 5 taman kumkum.jfif" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+          
+              </ul>
+          </div>
+          <h1 id="title">FOOD</h1>
+          
+          
+              <div class="scrolly">
+                  
+                <ul class="carouselPre">
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Depot Sari Patin</h1>
+                          <div class="textDet" style="background-color: black"><p>Masakan khas Banjar indentik halal dan gurih juga penggemarnya banyak.</p></div>
+                      </div>
+                      <a href="http://saripatin.com/">
+                      <div class="bgImg"><img src="/image/00pulau kecil/kalimantan/kalimantan tegah/makanan 1 depot patin.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Rumah Makan Cianjur</h1>
+                          <div class="textDet" style="background-color: black"><p>Makan di pondok indah cianjur bersama keluarga dengan harga murah dan pelayanan yang sangat ramah.</p></div> 
+                      </div>
+                      <a href="https://vymaps.com/ID/Rumah-Makan-Cianjur-Palangkaraya-762727420581167/">
+                      <div class="bgImg"><img src="/image/00pulau kecil/kalimantan/kalimantan tegah/makanan 2 makan cianjur.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Dapur Galuh Resto</h1>
+                          <div class="textDet" style="background-color: black"><p>tempatnya nyaman, pas untuk ajak keluarga, makanan nya juga banyak pilhan dengan penyajian yang menarik</p></div>
+                      </div>
+                      <a href="http://dapurgaluhbjb.blogspot.com/2014/08/menu-dapur-galuh-resto.html">
+                      <div class="bgImg"><img src="/image/00pulau kecil/kalimantan/kalimantan tegah/makanan 3 dapur galih resto.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Kampung Lauk</h1>
+                          <div class="textDet" style="background-color: black"><p>restaurant yang luas dengan sudut view yang indah yaitu sungai kahayan.</p></div>
+                      </div>
+                      <a href="https://vymaps.com/ID/Kampung-Lauk-400762673360943/">
+                      <div class="bgImg"><img src="/image/00pulau kecil/kalimantan/kalimantan tegah/makanan4 kampung lauk.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+                  <li class="itemsC">
+                      <div class="contents">
+                          <h1 class="leftTxtDet">Rumah Tjilik Riwut Gallery</h1>
+                          <div class="textDet" style="background-color: black"><p>menyajikan menu masakan Dayak dipadu dengan galeri yang memamerkan sepenggal perjalanan Kota Palangkaraya</p></div>
+                      </div>
+                      <a href="https://travel.kompas.com/read/2016/03/18/083100427/Mengurai.Kenangan.di.Tjilik.Riwut?page=all">
+                      <div class="bgImg"><img src="/image/00pulau kecil/kalimantan/kalimantan tegah/mmakanan 5 Rumah Tjilik Riwut Gallery.jpg" alt="image" srcset=""></div>
+                    </a>
+                  </li>
+          
+              </ul>
+          </div>
+          
+          
+      
+            
+              
+      
+          </div><!-- penutupan div body-->
+          
+
+    <%- include('../layout/footer.ejs'); %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
