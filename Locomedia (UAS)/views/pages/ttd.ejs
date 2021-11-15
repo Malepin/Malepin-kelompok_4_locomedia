@@ -3,84 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/ttd.css">
   </head>
-
-  <style>
-    .card img {
-      width: 215px;
-      height: 215px;
-    }
-
-    h2 {
-      font-weight: bold; 
-      color: white;
-      text-align: center; 
-      background-color: rgb(255, 255, 255, 0, 5); 
-      backdrop-filter: blur(2px);
-    }
-
-    .popular-cities .cards .card img {
-      width: 272px;
-      height: 272px;
-    }
-
-    .popular-cities .cards a:hover h5{
-      text-decoration: underline;
-    }
-
-    .popular-cities .cards a .card{
-      border-color: white;
-    }
-
-    .attraction .collum .row #carouselExampleControls .carousel-inner .carousel-item img {
-      width: 368px;
-      height: 368px;
-    }
-
-    .attraction .collum .row #carouselExampleControls2 .carousel-inner .carousel-item img {
-      width: 368px;
-      height: 368px;
-    }
-
-    .attraction .collum .row #carouselExampleControls3 .carousel-inner .carousel-item img {
-      width: 368px;
-      height: 368px;
-    }
-
-    .attraction .collum .row #carouselExampleControls4 .carousel-inner .carousel-item img {
-      width: 368px;
-      height: 368px;
-    }
-
-    .attraction .collum .row #carouselExampleControls5 .carousel-inner .carousel-item img {
-      width: 368px;
-      height: 368px;
-    }
-
-    .attraction .collum .row #carouselExampleControls6 .carousel-inner .carousel-item img {
-      width: 368px;
-      height: 368px;
-    }
-
-    .attraction .collum .row #carouselExampleControls7 .carousel-inner .carousel-item img {
-      width: 368px;
-      height: 368px;
-    }
-
-    .attraction .collum .row #carouselExampleControls8 .carousel-inner .carousel-item img {
-      width: 368px;
-      height: 368px;
-    }
-
-    .attraction .collum .row #carouselExampleControls9 .carousel-inner .carousel-item img {
-      width: 368px;
-      height: 368px;
-    }
-
-    
-  </style>
 
   <body>
     <%- include('../layout/navbar.ejs'); %>
@@ -172,7 +97,7 @@
         <h1 style="font-weight: 700; text-align: center;">Top Attraction in Indonesia</h1>
       </div>
       <div class="collum" style="display: flex; justify-content: center;">
-        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%;">
+        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%; flex-basis: 20%;">
           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <a href="padar" style="text-decoration: none;">
               <div class="carousel-inner">
@@ -201,7 +126,7 @@
           </div>
         </div>
 
-        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%;">
+        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%; flex-basis: 20%;">
           <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
             <a href="sacred-monkey-forest" style="text-decoration: none;">
               <div class="carousel-inner">
@@ -230,7 +155,7 @@
           </div>
         </div>
 
-        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%;">
+        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%; flex-basis: 20%;">
           <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
             <a href="grand-indonesia" style="text-decoration: none;">
               <div class="carousel-inner">
@@ -261,7 +186,7 @@
       </div>
 
       <div class="collum" style="display: flex; justify-content: center;">
-        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%;">
+        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%; flex-basis: 20%;">
           <div id="carouselExampleControls4" class="carousel slide" data-bs-ride="carousel">
             <a href="double-six" style="text-decoration: none;">
               <div class="carousel-inner">
@@ -290,7 +215,7 @@
           </div>
         </div>
 
-        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%;">
+        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%; flex-basis: 20%;">
           <div id="carouselExampleControls5" class="carousel slide" data-bs-ride="carousel">
             <a href="waterboombali" style="text-decoration: none;">
               <div class="carousel-inner">
@@ -319,7 +244,7 @@
           </div>
         </div>
 
-        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%;">
+        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%; flex-basis: 20%;">
           <div id="carouselExampleControls6" class="carousel slide" data-bs-ride="carousel">
             <a href="lawang-sewu" style="text-decoration: none;">
               <div class="carousel-inner">
@@ -349,8 +274,8 @@
         </div>
       </div>
 
-      <div class="collum" style="display: flex; justify-content: center;">
-        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%;">
+      <div class="collum" style="display: flex; justify-content: center; ">
+        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%; flex-basis: 20%;">
           <div id="carouselExampleControls7" class="carousel slide" data-bs-ride="carousel">
             <a href="merapi" style="text-decoration: none;">
               <div class="carousel-inner">
@@ -379,7 +304,7 @@
           </div>
         </div>
 
-        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%;">
+        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%; flex-basis: 20%;">
           <div id="carouselExampleControls8" class="carousel slide" data-bs-ride="carousel">
             <a href="busa-dua" style="text-decoration: none;">
               <div class="carousel-inner">
@@ -408,7 +333,7 @@
           </div>
         </div>
 
-        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%;">
+        <div class="row" style="margin-top: 3%; margin-left: 0.05%; margin-right: 0.05%; flex-basis: 20%;">
           <div id="carouselExampleControls9" class="carousel slide" data-bs-ride="carousel">
             <a href="sacred-monkey-forest" style="text-decoration: none;">
               <div class="carousel-inner">

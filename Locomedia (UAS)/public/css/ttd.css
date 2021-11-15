@@ -1,0 +1,70 @@
+.card img {
+    width: 215px;
+    height: 215px;
+  }
+
+  h2 {
+    font-weight: bold; 
+    color: white;
+    text-align: center; 
+    background-color: rgb(255, 255, 255, 0, 5); 
+    backdrop-filter: blur(2px);
+  }
+
+  .popular-cities .cards .card img {
+    width: 272px;
+    height: 272px;
+  }
+
+  .popular-cities .cards a:hover h5{
+    text-decoration: underline;
+  }
+
+  .popular-cities .cards a .card{
+    border-color: white;
+  }
+
+  .attraction .collum .row #carouselExampleControls .carousel-inner .carousel-item img {
+    width: 368px;
+    height: 368px;
+  }
+
+  .attraction .collum .row #carouselExampleControls2 .carousel-inner .carousel-item img {
+    width: 368px;
+    height: 368px;
+  }
+
+  .attraction .collum .row #carouselExampleControls3 .carousel-inner .carousel-item img {
+    width: 368px;
+    height: 368px;
+  }
+
+  .attraction .collum .row #carouselExampleControls4 .carousel-inner .carousel-item img {
+    width: 368px;
+    height: 368px;
+  }
+
+  .attraction .collum .row #carouselExampleControls5 .carousel-inner .carousel-item img {
+    width: 368px;
+    height: 368px;
+  }
+
+  .attraction .collum .row #carouselExampleControls6 .carousel-inner .carousel-item img {
+    width: 368px;
+    height: 368px;
+  }
+
+  .attraction .collum .row #carouselExampleControls7 .carousel-inner .carousel-item img {
+    width: 368px;
+    height: 368px;
+  }
+
+  .attraction .collum .row #carouselExampleControls8 .carousel-inner .carousel-item img {
+    width: 368px;
+    height: 368px;
+  }
+
+  .attraction .collum .row #carouselExampleControls9 .carousel-inner .carousel-item img {
+    width: 368px;
+    height: 368px;
+  }

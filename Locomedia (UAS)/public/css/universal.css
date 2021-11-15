@@ -5,9 +5,20 @@
     padding: 5px;
 }
 
+.mininfo {
+    display: flex;
+    margin-left: 115px;
+}
+
+.mininfo img {
+    height: 28px;
+    width: 125px;
+    padding-bottom: 5px;
+}
+
 .title {
     text-align: left;
-    margin: 10px 10px 10px 50px;
+    margin: 10px 10px 10px 115px;
 }
 
 .subcontainer {
@@ -17,7 +28,7 @@
 .about {
     border: solid rgba(233, 223, 223, 0.247);
     border-radius: 15px;
-    padding: 5px;
+    padding: 20px;
     width: 50%;
     margin-right: 10px;
 }
@@ -35,7 +46,9 @@
 
 .infocon {
     display: flex;
-    height: 40%;
+    height: 38%;
+    width: 88.2%;
+    margin-left: 50px;
 }
 
 .infocon #carouselExampleIndicators .carousel-inner .carousel-item img{
