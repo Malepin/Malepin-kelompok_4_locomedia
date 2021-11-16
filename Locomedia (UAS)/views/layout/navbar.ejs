@@ -42,18 +42,26 @@
             <img src="/image/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
             <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
           </a>
-          <div class="button-container">
+          <div class="button-container" style="display: flex; justify-content: center; margin-right: 1%;">
             <% if (locals.isLoggedIn) { %>
+            <a href="review" style="display: flex; text-decoration: none; color: black; margin-right: 20%;">
+              <img src="/image/icon/review.svg" alt="" style="margin-right: 10%;">
+              <h5 style="margin-top: 10%;">  Review</h5>
+            </a>
             <a href="logout">
               <button type="button" class="btn" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
                 Logout
               </button>
             </a>
             <% } else { %>
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
+            <a href="review" style="display: flex; text-decoration: none; color: black; margin-right: 40px;">
+              <img src="/image/icon/review.svg" alt="" style="margin-right: 10%;">
+              <h5 style="margin-top: 10%;">  Review</h5>
+            </a>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: solid; margin-right: 20px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
               Login
             </button>
-            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="border: solid; margin-right: 25px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal3" style="border: solid; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
               Register
             </button>
             <% } %>

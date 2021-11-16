@@ -12,15 +12,15 @@ router.post('/', (req, res) =>{
     
     if (email == "mathew@gmail.com" && password == "123"){
         req.session.isLoggedIn = true;
-        res.redirect('/')
+        res.redirect(req.get('referer'));
     } else {
-        res.render('pages/sumatera')
+        res.redirect(req.get('referer'));
     }
 })
 
 router.get('/logout', (req, res) =>{
     req.session.isLoggedIn = false;
-    res.redirect('/');
+    res.redirect(req.get('referer'));
 })
 
 router.get('/jawa', (req, res) => {
