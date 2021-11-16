@@ -4,16 +4,16 @@ const router = express.Router()
 
 
 
-router.get('/jawabarat', (req, res) => {
-    res.render('pages/jawabarat');
+router.get('/sumaterabarat', (req, res) => {
+    res.render('pages/sumaterabarat');
 })
 
-router.get('/jawatimur', (req, res) => {
-    res.render('pages/jawatimur');
+router.get('/sumateraselatan', (req, res) => {
+    res.render('pages/sumatera');
 })
 
-router.get('/jawatengah', (req, res) => {
-    res.render('pages/jawatengah');
+router.get('/sumaterautara', (req, res) => {
+    res.render('pages/sumaterautara');
 })
 
 

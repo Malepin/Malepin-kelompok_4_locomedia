@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/universal.css">
+    <script src="js/universal.js"></script>
+	
+    <title>Mount Merapi</title>
+  </head>
+  
+  <body>
+    <%- include('../layout/navbar.ejs'); %>
+    
+    <h1 class="title">Mount Merapi</h1>
+    <div class="mininfo">
+      <img src="/image/ttd/Rating Star PNG/5star.png" alt=""> 
+      <p></p>
+      <p></p>
+      &#8226;
+      <p>Nature In Indonesia</p>
+    </div>
+
+    <div class="container">
+       <div>
+        <div class="about">
+            <h1>About</h1>
+            <p>
+                Mount Merapi, Gunung Merapi (literally Fire Mountain in Indonesian and Javanese), is an active stratovolcano located on the border between the province of Central Java and the Special Region of Yogyakarta, Indonesia. It is the most active volcano in Indonesia and has erupted regularly since 1548. 
+                It is located approximately 28 kilometres (17 mi) north of Yogyakarta city which has a population of 2.4 million, and thousands of people live on the flanks of the volcano, with villages as high as 1,700 metres (5,577 ft) above sea level.<span id="dots">...</span><span id="more">
+                Smoke can often be seen emerging from the mountaintop, and several eruptions have caused fatalities. A pyroclastic flow from a large explosion killed 27 people on 22 November 1994, mostly in the town of Muntilan, west of the volcano.Another large eruption occurred in 2006, shortly before the Yogyakarta earthquake. In light of the hazards that Merapi poses to populated areas, it was designated as one of the Decade Volcanoes.
+                On the afternoon of 25 October 2010, Merapi erupted on its southern and southeastern slopes. A total of 353 people were killed over the next month, while 350,000 were forced to flee their homes; most of the damage was done by pyroclastic flows, while heavy rain on 4th November created lahars which caused further damage. Most of the fissures had ceased erupting by 30th November, and four days later the official threat level was lowered.
+                Merapi's characteristic shape was changed during the eruptions, with its height lowered 38 metres (125 ft) to 2,930 metres (9,613 ft).
+                </span>
+            </p>
+
+            <button onclick="myFunction()" id="myBtn">Read more</button>
+
+            <p></p>
+            
+            <p>Province&nbsp &nbsp:</p>
+          
+            <p>Central Java</p>
+  
+            <div class="button-container">
+              <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#operationalhours">
+                Operational Hours
+              </button>
+            </div>
+    
+            <div class="modal fade" id="operationalhours" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <li>
+                        <ol>Monday : 24 Hours</ol>
+                        <ol>Tuesday : 24 Hours</ol>
+                        <ol>Wednesday : 24 Hours</ol>
+                        <ol>Thursday : 24 Hours</ol>
+                        <ol>Friday : 24 Hours</ol>
+                        <ol>Saturday : 24 Hours</ol>
+                        <ol>Sunday : 24 Hours</ol>
+                    </li>
+                  </div>
+                </div>
+              </div>          
+            </div>
+    
+            <p></p>
+            <p>Visit Web&nbsp &nbsp:</p>
+            <a href="https://merapi.bgl.esdm.go.id/" target="_blank">Click Here</a>
+            
+        </div>
+
+        <div class="smlinfo" style="height: 270px;">
+            
+        </div>
+      </div>
+      
+      <div class="subcontainer">
+
+          <div class="vidcon">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/BrMl2epAA5A" title="YouTube video player" >
+            </iframe>
+          </div>
+      
+          <div class="infocon" style="justify-content: center;">                
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="flex-basis: 20%;">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/image/ttd/nature and wildlife/merapi.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img src="/image/ttd/nature and wildlife/merapi.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img src="/image/ttd/nature and wildlife/merapi3.jpg" alt="Third slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </a>
+            </div>                 
+
+            <iframe height="270" width="412" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31642.510281178067!2d110.42821446861558!3d-7.540717051931476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a641ec0ff2fa5%3A0xe92612624cad8800!2sMount%20Merapi!5e0!3m2!1sen!2sid!4v1637070716021!5m2!1sen!2sid" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        
+          </div>
+      </div>
+    </div>
+
+    <%- include('../layout/footer.ejs'); %>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
