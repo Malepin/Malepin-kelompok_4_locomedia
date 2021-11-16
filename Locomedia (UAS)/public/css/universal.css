@@ -3,6 +3,7 @@
     width: 100%;
     margin: auto;
     padding: 5px;
+    margin-bottom: 20px;
 }
 
 .mininfo {
@@ -23,6 +24,7 @@
 
 .subcontainer {
     width: 100%;
+    margin-left: 15px;
 }
 
 .about {
