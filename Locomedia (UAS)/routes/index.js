@@ -18,6 +18,12 @@ router.post('/', (req, res) =>{
     }
 })
 
+router.post('/search', (req, res) =>{
+    const name = req.body.search;
+    res.redirect('/' + name);
+})
+
+
 router.get('/logout', (req, res) =>{
     req.session.isLoggedIn = false;
     res.redirect(req.get('referer'));
