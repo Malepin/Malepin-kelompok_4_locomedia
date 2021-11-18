@@ -2,6 +2,7 @@ const express = require('express')
 const bodyparser = require('body-parser')
 const session = require('express-session')
 const app = express()
+const mongoose = require('mongoose')
 
 app.use(express.static('public'))
 app.set('view engine', 'ejs' )
@@ -18,6 +19,17 @@ app.use((req, res, next) => {
     next();
 })
 
+mongoose.connect(('mongodb+srv://Mathew:gesFd1Q0PI9u0hjb@locomedia.fe0cl.mongodb.net/locomedia?retryWrites=true&w=majority')
+, (err,res) => {
+    if (err){
+        console.log(err);
+    } else {
+        console.log('Database terhubung untuk seeding');
+    }
+})
+
+// SEDDING
+
 const indexRouter = require('./routes/index');
 const ttdRouter = require('./routes/ttd');
 const citiesRouter = require('./routes/cities');
@@ -32,6 +44,8 @@ const sulawesiRouter = require('./routes/sulawesi')
 const papuaRouter = require('./routes/papua')
 const artikelRouter = require('./routes/artikel')
 const { cookie } = require('express-validator')
+
+
 
 app.use('/', indexRouter,)
 

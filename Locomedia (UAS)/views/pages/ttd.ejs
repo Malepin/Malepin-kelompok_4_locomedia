@@ -57,34 +57,15 @@
               <h4>Popular Cities In Indonesia</h4>
             </div>
             <div class="cards" style="display: flex; justify-content: center;">
-              <a href="jakarta" style="text-decoration: none; padding-right: 0.6%; padding-left: 0.6%;">
-                <div class="card">
-                  <img src="/image/ttd/cities/jakarta.jpg" alt="">
-                  <h5 style="color: black; margin-top: 3%;">Jakarta</h5>
-                  <h6 style="color: black; font-weight: 400;">DKI Jakarta, Indonesia</h6>
-                </div>
-              </a>
-              <a href="yogyakarta" style="text-decoration: none; padding-right: 0.6%; padding-left: 0.6%;">
-                <div class="card">
-                  <img src="/image/ttd/cities/yogyaa.jpg" alt="">
-                  <h5 style="color: black; margin-top: 3%;">Yogyakarta</h5>
-                  <h6 style="color: black; font-weight: 400;">DI Yogyakarta, Indonesia</h6>
-                </div>
-              </a>
-              <a href="ubud" style="text-decoration: none; padding-right: 0.6%; padding-left: 0.6%;">
-                <div class="card">
-                  <img src="/image/ttd/cities/ubudd.jpg" alt="">
-                  <h5 style="color: black; margin-top: 3%;">Ubud</h5>
-                  <h6 style="color: black; font-weight: 400;">Bali, Indonesia</h6>
-                </div>
-              </a>
-              <a href="bandung" style="text-decoration: none; padding-right: 0.6%; padding-left: 0.6%;">
-                <div class="card">
-                  <img src="/image/ttd/cities/bandungg.jpg" alt="">
-                  <h5 style="color: black; margin-top: 3%;">Bandung</h5>
-                  <h6 style="color: black; font-weight: 400;">Jawa Barat, Indonesia</h6>
-                </div>
-              </a>
+              <% cities.forEach((city) => { %>
+                <a href="<%= city.link %>" style="text-decoration: none; padding-right: 0.6%; padding-left: 0.6%;">
+                  <div class="card">
+                    <img src="<%= city.imagePath %>" alt="">
+                    <h5 style="color: black; margin-top: 3%;"><%= city.name %></h5>
+                    <h6 style="color: black; font-weight: 400;"><%= city.location %></h6>
+                  </div>
+                </a>
+              <% }) %>
             </div>
         </div>
         <hr style="margin-top: 3.5%; color:darkgray;">

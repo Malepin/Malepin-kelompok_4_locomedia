@@ -1,7 +1,11 @@
 const mongoose = require('mongoose')
 
 const Account = mongoose.model("Account", {
-    nama:{
+    namaDepan:{
+        type:String,
+        required:true,
+    },
+    namaBelakang:{
         type:String,
         required:true,
     },

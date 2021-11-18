@@ -1,4 +1,5 @@
 const express = require('express')
+const City = require('../model/city')
 
 const router = express.Router()
 
@@ -49,8 +50,9 @@ router.get('/papua', (req, res) => {
     res.render('pages/papua');
 })
 
-router.get('/ttd', (req,res) => {
-    res.render('pages/ttd');
+router.get('/ttd', async(req, res) => {
+    var cityData = await City.find();
+    res.render('pages/ttd', {cities: cityData});
 })
 
 
