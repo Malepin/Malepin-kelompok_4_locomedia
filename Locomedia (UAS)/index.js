@@ -43,6 +43,7 @@ const sumateraRouter = require('./routes/sumatera')
 const sulawesiRouter = require('./routes/sulawesi')
 const papuaRouter = require('./routes/papua')
 const artikelRouter = require('./routes/artikel')
+const adminRouter = require('./routes/admin')
 const { cookie } = require('express-validator')
 
 
@@ -72,6 +73,8 @@ app.use('/', sulawesiRouter);
 app.use('/', papuaRouter);
 
 app.use('/', artikelRouter);
+
+app.use('/', adminRouter);
 
 
 app.listen(3000, ()=> {

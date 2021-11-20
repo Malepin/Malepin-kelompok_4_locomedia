@@ -58,6 +58,9 @@
               <img src="/image/icon/review.svg" alt="" style="margin-right: 10%;">
               <h5 style="margin-top: 10%;">  Review</h5>
             </a>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal5" style="border: solid; margin-right: 20px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
+              Admin
+            </button>
             <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2" style="border: solid; margin-right: 20px; background-color: black; color: white; border-radius: 10px; width: 100px; height: auto;">
               Login
             </button>
@@ -181,6 +184,38 @@
               </div>
             </div>
           </div>
+
+          <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <img src="/image/logo/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-center" style="border-radius: 25px;">
+                  <h1 style="font-size: 25px;"> &nbsp &nbsp Locomedia</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form method="post" action="/admin">
+                    <h3 class="mx-auto col-11" style="margin-bottom: 40px; margin-top: 20px; font-size: 25px; font-weight: 600;">Hello Admin.</h3>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputEmail1" class="form-label">Email address</label>
+                      <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="mx-auto col-11" style="justify-content: center;">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <a href="" class="" data-bs-toggle="modal" data-bs-target="#exampleModal4" style="margin-top: 20px; color: black;"><br> Forgot Password?</a>
+                    </div>
+                    <div class="d-grid col-9 mx-auto" style="justify-content: center; margin-top: 10%;">
+                      <button type="submit" data-bs-dismiss="modal" class="btn" style="border: solid; background-color: black; color: white; border-radius: 25px; width: 150px; height: 50px;">Sign in</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </nav>
 

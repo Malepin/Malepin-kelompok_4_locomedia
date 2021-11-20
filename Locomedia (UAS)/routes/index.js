@@ -1,4 +1,5 @@
-const express = require('express')
+const express = require('express');
+const { Result } = require('express-validator');
 const City = require('../model/city')
 
 const router = express.Router()
@@ -22,6 +23,26 @@ router.post('/', (req, res) =>{
 router.post('/search', (req, res) =>{
     const name = req.body.search;
     res.redirect('/' + name);
+})
+
+router.get('/admin', async(req, res) => {
+    var cityData = await City.find();
+    res.render('pages/admin', {cities: cityData});
+})
+
+router.post('/admin', async(req, res) =>{
+    const email = req.body.email;
+    const password = req.body.password;
+
+    var cityData = await City.find();
+    res.render('pages/admin', {cities: cityData});
+
+    if (email == "mathew@gmail.com" && password == "123"){
+        req.session.isLoggedIn = true;
+        res.render('pages/admin');
+    } else {
+        res.redirect(req.get('referer'));
+    }
 })
 
 
