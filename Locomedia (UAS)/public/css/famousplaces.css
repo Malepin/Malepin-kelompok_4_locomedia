@@ -34,14 +34,12 @@
 .maincontent {
     margin: 10px;
     display: block;
-    
 }
 
 .rating img{
     margin-top: -20px;
     height: 28px;
     width: 125px;
-    
 }
 
 @media screen and (max-width:1200px) {

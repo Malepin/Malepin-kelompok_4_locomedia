@@ -10,7 +10,134 @@
     <title>Baluran National Park</title>
   </head>
   <body>
-    <%- include('../layout/navbar.ejs'); %>
+    <%- include('../layout/navbar.ejs'); %><!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/universal.css">
+        <script src="js/universal.js"></script>
+        
+        <title>Baluran National Park</title>
+      </head>
+      
+      <body>
+        <%- include('../layout/navbar.ejs'); %>
+        
+        <h1 class="title">Baluran National Park</h1>
+        <div class="mininfo">
+          <img src="/image/ttd/Rating Star PNG/5star.png" alt=""> 
+          <p></p>
+          <p></p>
+          &#8226;
+          <p>National Park In Indonesia</p>
+        </div>
+    
+        <div class="container">
+        <div>
+            <div class="about">
+                <h1>About</h1>
+                <p>
+                    Baluran National Park is located in Situbondo Regency, East Java, Indonesia. It has a relatively dry climate and mainly consists of savanna, as well as lowland forests, mangrove forests and hills, with Mount Baluran as its highest peak.
+                    </span>
+                </p>
+                    
+                <p>Address&nbsp &nbsp:</p>
+                    
+                <p>Area Hutan/Kebun, Sumberwaru, Banyuputih, Situbondo Regency, East Java</p>
+            
+                <p>Call&nbsp &nbsp:</p>
+            
+                <p>(0333) 461936</p>
+                
+                <div class="button-container">
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#operationalhours">
+                        Operational Hours
+                    </button>
+                </div>
+            
+                <div class="modal fade" id="operationalhours" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <li>
+                                    <ol>Monday : 07.30 - 16.00</ol>
+                                    <ol>Tuesday : 07.30 - 16.00</ol>
+                                    <ol>Wednesday : 07.30 - 16.00</ol>
+                                    <ol>Thursday : 07.30 - 16.00</ol>
+                                    <ol>Friday : 07.30 - 16.00</ol>
+                                    <ol>Saturday : 07.30 - 16.00</ol>
+                                    <ol>Sunday : 07.30 - 16.00</ol>
+                                </li>
+                            </div>
+                        </div>
+                    </div>          
+                </div>
+            
+                <p></p>
+                <p>Visit Web&nbsp &nbsp:</p>
+                <a href="https://balurannationalpark.id/" target="_blank">Click Here</a>
+            </div>
+    
+            <div class="smlinfo" style="height: 270px;">
+                <p>Province: East Java</p>
+                <p>Area: 250 km²</p>
+                <p>Established: 1980</p>
+                <p>Management: Ministry of Environment and Forestry of The Republic of Indonesia</p>
+            </div>
+        </div>
+          
+          <div class="subcontainer">
+    
+              <div class="vidcon">
+                <iframe class="responsive-iframe" src="https://www.youtube.com/embed/BqMBG9iemxI" title="YouTube video player" >
+                </iframe>
+              </div>
+          
+              <div class="infocon" style="justify-content: center;">                
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="flex-basis: 20%;">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="/image/ttd/famous places/lawang1.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/image/ttd/famous places/lawang2.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="/image/ttd/famous places/lawang3.jpg" alt="Third slide">
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </a>
+                </div>                 
+    
+                <iframe height="270" width="412" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.608549557933!2d114.38536181459862!3d-7.831188394357179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1249454d7c085%3A0x67067c7ed3eced4b!2sBaluran%20National%20Park!5e0!3m2!1sen!2sid!4v1632595596883!5m2!1sen!2sid" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            
+              </div>
+          </div>
+        </div>
+    
+        <%- include('../layout/footer.ejs'); %>
+    
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+      </body>
+    </html>
     
     <h1 class="title">Baluran National Park</h1>
 
