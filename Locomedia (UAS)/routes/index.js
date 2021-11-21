@@ -3,13 +3,10 @@ const { Result } = require('express-validator');
 const City = require('../model/city')
 const Article = require('../model/article')
 
-const methodOverride = require('method-override');
 const router = express.Router()
 
-router.use(methodOverride("_method"));
-
 router.get('/', async(req, res) => {
-    var articleData = await article.find()
+    var articleData = await Article.find()
     res.render('pages/index', {articles: articleData});
 })
 
