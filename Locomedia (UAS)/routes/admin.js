@@ -26,8 +26,8 @@ router.post('/admin-update/cityUpdate', (req,res) => {
     });
 })
 
-router.delete("/admin", (req, res) => {
-    City.findByIdAndDelete(req.body.id).then((result) => {
+router.post('/admin-update/cityDelete', (req,res) => {
+    City.findByIdAndDelete(req.params.id).then((result) => {
         res.redirect('/admin');
     });
 })
