@@ -2,8 +2,10 @@ const express = require('express')
 const City = require('../model/city')
 
 const router = express.Router()
+const methodOverride = require('method-override');
+router.use(methodOverride("_method"));
 
-router.post('/cityAdd', (req, res) => {
+router.post('/admin/cityAdd', (req, res) => {
     City.insertMany(req.body, (error, result) => {
         res.redirect('/admin');
     })
@@ -20,6 +22,12 @@ router.post('/admin-update/cityUpdate', (req,res) => {
             location: req.body.location,
         },
     }).then((result) => {
+        res.redirect('/admin');
+    });
+})
+
+router.delete("/admin", (req, res) => {
+    City.findByIdAndDelete(req.body.id).then((result) => {
         res.redirect('/admin');
     });
 })
