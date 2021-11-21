@@ -209,45 +209,21 @@
           <h3 style="float: left; font-size: 27x;">More to explore</h3>
         </div>
         <div class="body">
-          <div class="card" style="height: 24rem;">
-            <a href="artikel1">
-              <img src="/image/background/pemandangan.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body" style="text-align: center">
-              <a href="more to explore/artikel1.html" style="color: black; text-decoration: none;">
-                <div class="title" style="margin-top: 5px; margin-bottom: 15px;">
-                  <h6>From Locomedia</h6>
-                </div>
-                <p class="card-text" style="font-weight: 500; font-size: 1.1em;">Popular Indonesian Tourist Destinations in the Eyes of the World</p>
+          <% articles.forEach((article) => { %>
+            <div class="card" style="height: 24rem;">
+              <a href="<%= article.link %>">
+                <img src="<%= article.imagePath %>" class="card-img-top" alt="...">
               </a>
+              <div class="card-body" style="text-align: center">
+                <a href="<%= article.link %>" style="color: black; text-decoration: none;">
+                  <div class="title" style="margin-top: 5%; margin-bottom: 15px;">
+                    <h6><%= article.sumber %></h6>
+                  </div>
+                  <p class="card-text" style="font-weight: 500; font-size: 1.1em;"><%= article.title %></p>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="card" style="height: 24rem;">
-            <a href="artikel2">
-              <img src="/image/background/peta suku.jpg" class="card-img-top" alt="...">
-            </a>
-            <div class="card-body" style="text-align: center">
-              <a href="more to explore/artikel2.html/artikel2.html" style="color: black; text-decoration: none;">
-                <div class="title" style="margin-top: 5px; margin-bottom: 15px;">
-                  <h6>From Locomedia</h6>
-                </div>
-                <p class="card-text" style="font-weight: 500; font-size: 1.1em;">List of Ethnic Groups in Indonesia and Social Institutions of Its People</p>
-              </a>
-            </div>
-          </div>
-          <div class="card" style="height: 24rem;">
-            <a href="artikel3">
-              <img src="/image/background/peta hewan.jpg" class="card-img-top" alt="...">
-            </a>
-          <div class="card-body" style="text-align: center">
-              <a href="more to explore/artikel3.html" style="color: black; text-decoration: none;">
-                <div class="title" style="margin-top: 5px; margin-bottom: 15px;">
-                  <h6>From Locomedia</h6>
-                </div>
-                <p class="card-text" style="font-weight: 500; font-size: 1.1em;">List of rare animals in Indonesia</p>
-              </a>
-            </div>
-          </div>
+          <% }) %>
         </div>
       </div>
 

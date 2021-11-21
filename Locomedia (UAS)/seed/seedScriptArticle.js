@@ -12,19 +12,32 @@ mongoose.connect(('mongodb+srv://Mathew:gesFd1Q0PI9u0hjb@locomedia.fe0cl.mongodb
 })
 
 const articles = [
-    new Cities({
-        imagePath: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/10/2e/cb/jakarta.jpg?w=600&h=600&s=1',
+    new Articles({
+        imagePath: 'https://ik.imagekit.io/tvlk/blog/2020/01/keindahan-alam-indonesia-6-Wikipedia.jpg',
+        link: 'article1',
         sumber: 'From Locomedia',
-        title: "The Beauty of Indonesia's Nature"
+        title: "Natural Beauty of Indonesia"
+    }),
+    new Articles({
+        imagePath: 'https://keluhkesah.com/wp-content/uploads/2020/11/5.-Mempelajari-Pengertian-Sejarah-dan-manfaat-Keberagaman-Budaya-Indonesia-Lebih-Jauh.jpg',
+        sumber: 'From Locomedia',
+        link: 'article2',
+        title: "The Cultures of Indonesia"
+    }),
+    new Articles({
+        imagePath: 'https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1608637115/wb6howgpnvolrkg44uqe.jpg',
+        link: 'article3',
+        sumber: 'From Locomedia',
+        title: "Unique Ecosystem of Indonesia"
     }),
 ]
 
 var done = 0
 for (var i=0 ; i<articles.length; i++){
-    cities[i].save((err, res) => {
+    articles[i].save((err, res) => {
         done++
-        if (done == cities.length){
-            console.log('kota berhasil diupload');
+        if (done == articles.length){
+            console.log('article berhasil diupload');
             exit();
         }
     })

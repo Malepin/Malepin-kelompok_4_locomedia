@@ -1,14 +1,16 @@
 const express = require('express');
 const { Result } = require('express-validator');
 const City = require('../model/city')
+const Article = require('../model/article')
 
 const methodOverride = require('method-override');
 const router = express.Router()
 
 router.use(methodOverride("_method"));
 
-router.get('/', (req, res) => {
-    res.render('pages/index');
+router.get('/', async(req, res) => {
+    var articleData = await article.find()
+    res.render('pages/index', {articles: articleData});
 })
 
 router.post('/', (req, res) =>{
@@ -30,9 +32,11 @@ router.post('/search', (req, res) =>{
 
 router.get('/admin', async(req, res) => {
     var cityData = await City.find();
+    var articleData = await Article.find();
 
     res.render('pages/admin', {
         cities: cityData,
+        articles: articleData,
     });
 })
 
@@ -41,7 +45,12 @@ router.post('/admin', async(req, res) =>{
     const password = req.body.password;
 
     var cityData = await City.find();
-    res.render('pages/admin', {cities: cityData});
+    var articleData = await Article.find();
+
+    res.render('pages/admin', {
+        cities: cityData,
+        articles: articleData,
+    });
 
     if (email == "mathew@gmail.com" && password == "123"){
         req.session.isLoggedIn = true;
