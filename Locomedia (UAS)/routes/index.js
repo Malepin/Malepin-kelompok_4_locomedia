@@ -45,6 +45,22 @@ router.post('/admin', async(req, res) =>{
     }
 })
 
+router.delete('/admin', (req, res) => {
+    City.findByIdAndDelete(req.body.id).then((result) => {
+        res.redirect('/admin');
+    });
+})
+
+router.get('/admin-update/:id', async(req, res) =>{
+    const city = await City.findById(req.params.id);
+    var cityData = await City.find();
+
+    res.render('pages/admin-update', {
+        city,
+        cities: cityData,
+    });
+})
+
 
 router.get('/logout', (req, res) =>{
     req.session.isLoggedIn = false;
