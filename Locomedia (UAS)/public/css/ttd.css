@@ -68,3 +68,11 @@
     width: 368px;
     height: 368px;
   }
+
+  @media screen and (max-width:1200px) {
+    .cards {
+      display: block;
+    }
+
+
+  }
