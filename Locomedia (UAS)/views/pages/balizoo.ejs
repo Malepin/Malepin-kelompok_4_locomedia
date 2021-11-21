@@ -6,95 +6,137 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/universal.css">
     <script src="js/universal.js"></script>
-	
+    
     <title>Bali Zoo</title>
   </head>
+  
   <body>
     <%- include('../layout/navbar.ejs'); %>
     
     <h1 class="title">Bali Zoo</h1>
+    <div class="mininfo">
+      <img src="/image/ttd/Rating Star PNG/4star.png" alt=""> 
+      <p></p>
+      <p></p>
+      &#8226;
+      <p>Zoo In Indonesia</p>
+    </div>
 
-    <div class="container_body">
+    <div class="container">
+    <div>
         <div class="about">
-            <h2>About</h2>
+            <h1>About</h1>
             <p>
                 Bali's first and only zoological park is a wondrous place where you can learn the behavior of over 500 rare and exotic animals in a lush, tropical environment. A park where you can participate in fascinating animal adventure activities, some of which are unique experiences of <span id="dots">...</span><span id="more">
                 their kind in Indonesia.
                 </span>
             </p>
-  
+        
             <button onclick="myFunction()" id="myBtn">Read more</button>
-          
+                
             <p></p>
             <p>Address&nbsp &nbsp:</p>
-          
+                
             <p>Singapadu, Sukawati, Gianyar, Bali 80582</p>
-      
+            
             <div class="button-container">
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#operationalhours">
-                Operational Hours
+                    Operational Hours
                 </button>
             </div>
-  
+        
             <div class="modal fade" id="operationalhours" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                     <div class="modal-content">
                         <div class="modal-header">
                             <li>
-                                <ol>Monday : 09.00 - 17.00</ol>
-                                <ol>Tuesday : 09.00 - 17.00</ol>
-                                <ol>Wednesday : 09.00 - 17.00</ol>
-                                <ol>Thursday : 09.00 - 17.00</ol>
-                                <ol>Friday : 09.00 - 17.00</ol>
-                                <ol>Saturday : 09.00 - 17.00</ol>
-                                <ol>Sunday : 09.00 - 17.00</ol>
+                                 <ol>Monday : 09.00 - 17.00</ol>
+                                  <ol>Tuesday : 09.00 - 17.00</ol>
+                                  <ol>Wednesday : 09.00 - 17.00</ol>
+                                  <ol>Thursday : 09.00 - 17.00</ol>
+                                  <ol>Friday : 09.00 - 17.00</ol>
+                                  <ol>Saturday : 09.00 - 17.00</ol>
+                                  <ol>Sunday : 09.00 - 17.00</ol>
                             </li>
                         </div>
                     </div>
                 </div>          
             </div>
-  
+        
             <p></p>
             <p>Visit Web&nbsp &nbsp:</p>
-            <a href="https://www.bali-zoo.com/" target="_blank">Click Here</a>   
+            <a href="https://www.bali-zoo.com/" target="_blank">Click Here</a>
         </div>
+
+        <div class="smlinfo" style="height: 270px;">
+            <h4>Tickets</h4>
+            <h6>General Admission Ticket :</h6>
+              <p>Adult : <br>Rp 252,000</p>
+              <p>Childern : <br>Rp 355,500</p>
+            <h6>Half-Day Bali Zoo Explorer with Lunch and Transfers :</h6>
+              <p>Adult : <br>Rp 738,000</p>
+              <p>Childern : <br>Rp 517,500</p>
+            <h6>Exclusive Elephant Expedition (20 minutes) :</h6>
+              <p>Adult : <br>p 1,399,500</p>
+              <p>Childern : <br>Rp 981,000</p>
+            <h6>Elephant Expedition (20 Minutes) :</h6>
+              <p>Adult : <br>Rp 999,000</p>
+              <p>Childern : <br>Rp 702,000</p>
+            <h6>Promo Elephant Mud Fun (Afternoon Session) :</h6>
+              <p>Adult : <br>Rp 997,500</p>
+              <p>Childern : <br>Rp 997,500</p>
+            <h6>Promo Elephant Mud Fun (Morning Session) :</h6>
+              <p>Adult : <br>Rp 997,500</p>
+              <p>Childern : <br>Rp 997,500</p>
+        </div>
+    </div>
       
-        <div class="container_frame">
-            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/YdbNRgepk4E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      <div class="subcontainer">
+
+          <div class="vidcon">
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/YdbNRgepk4E" title="YouTube video player" >
             </iframe>
-  
-            <div class="ticket">
-                <h4>Tickets</h4>
-                <h6>General Admission Ticket :</h6>
-                    <p>Adult : <br>Rp 252,000</p>
-                    <p>Childern : <br>Rp 355,500</p>
-                <h6>Half-Day Bali Zoo Explorer with Lunch and Transfers :</h6>
-                    <p>Adult : <br>Rp 738,000</p>
-                    <p>Childern : <br>Rp 517,500</p>
-                <h6>Exclusive Elephant Expedition (20 minutes) :</h6>
-                    <p>Adult : <br>p 1,399,500</p>
-                    <p>Childern : <br>Rp 981,000</p>
-                <h6>Elephant Expedition (20 Minutes) :</h6>
-                    <p>Adult : <br>Rp 999,000</p>
-                    <p>Childern : <br>Rp 702,000</p>
-                <h6>Promo Elephant Mud Fun (Afternoon Session) :</h6>
-                    <p>Adult : <br>Rp 997,500</p>
-                    <p>Childern : <br>Rp 997,500</p>
-                <h6>Promo Elephant Mud Fun (Morning Session) :</h6>
-                    <p>Adult : <br>Rp 997,500</p>
-                    <p>Childern : <br>Rp 997,500</p>
-            </div>  
-        </div>
+          </div>
       
-        <div class="info-container">      
-            <div class="gmap_canvas">
-                <iframe width="300" height="325" id="map" src="https://maps.google.com/maps?q=bali%20zoo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-            </div>  
-        </div>  
-    
+          <div class="infocon" style="justify-content: center;">                
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="flex-basis: 20%;">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/image/ttd/famous places/lawang1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img src="/image/ttd/famous places/lawang2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img src="/image/ttd/famous places/lawang3.jpg" alt="Third slide">
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </a>
+            </div>                 
+
+            <iframe height="270" width="412" class="map" src="https://maps.google.com/maps?q=bali%20zoo&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        
+          </div>
+      </div>
     </div>
 
     <%- include('../layout/footer.ejs'); %>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
   </body>
 </html>

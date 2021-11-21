@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="caa/famousplaces.css">
+    <link rel="stylesheet" href="css/famousplaces.css">
     <script src="js/universal.js"></script>
 
     <title>Famous Places</title>
   </head>
   <body>
     <%- include('../layout/navbar.ejs'); %>
-
+<div>
     <div class="innerbox">
 
         <div>
@@ -22,7 +22,7 @@
 
                 <div class="maincontent">
                     <a href="purpa" target="_blank" rel="noopener noreferrer">
-                        <img src="/image/ttd/shopping/purpa.jpg" alt="">
+                        <img src="/image/ttd/famous places/purpa.jpg" alt="">
                         <h4>1. Purpa Fine Art Gallery</h4>                   
                     </a>
                     <div class="rating">
@@ -35,7 +35,7 @@
     
                 <div class="maincontent">
                     <a href="batik" target="_blank" rel="noopener noreferrer">
-                        <img src="/image/ttd/shopping/batik.jpg" alt="">
+                        <img src="/image/ttd/famous places/batik.jpg" alt="">
                         <h4>2. Museum Tekstil</h4>                      
                     </a>
                     <div class="rating">
@@ -48,7 +48,7 @@
     
                 <div class="maincontent">
                     <a href="nasional" target="_blank" rel="noopener noreferrer">
-                        <img src="/image/ttd/shopping/nasional.jpg" alt="">
+                        <img src="/image/ttd/famous places/nasional.jpg" alt="">
                         <h4>3.  Museum Nasional Indonesia</h4>                     
                     </a>
                     <div class="rating">
@@ -72,7 +72,7 @@
             <div class="content">
                 <div class="maincontent">
                     <a href="tirta" target="_blank" rel="noopener noreferrer">
-                        <img src="/image/ttd/shopping/tirta gangga.jpg" alt="">
+                        <img src="/image/ttd/famous places/tirta gangga.jpg" alt="">
                         <h4>1. Tirta Gangga Water Palace</h4>                      
                     </a>
                     <div class="rating">
@@ -85,7 +85,7 @@
     
                 <div class="maincontent">
                     <a href="borobudur" target="_blank" rel="noopener noreferrer">
-                        <img src="/image/ttd/shopping/borobudur.jpg" alt="">
+                        <img src="/image/ttd/famous places/borobudur.jpg" alt="">
                         <h4>2. Borobudur Temple</h4>                      
                     </a>
                     <div class="rating">
@@ -98,7 +98,7 @@
     
                 <div class="maincontent">
                     <a href="jakartaold" target="_blank" rel="noopener noreferrer">
-                      <img src="/image/ttd/shopping/kota-tua-jakarta-indonesia.jpg" alt="">
+                      <img src="/image/ttd/famous places/kota-tua-jakarta-indonesia.jpg" alt="">
                     <h4>3. Jakarta Old Town</h4>                   
                     </a>
                     <div class="rating">
@@ -115,14 +115,13 @@
     </div>
 
     <div class="innerbox">
-
         <div>
             <h1 class="title">Landmarks</h1>
 
             <div class="content">
                 <a href="monas" target="_blank" rel="noopener noreferrer">
                     <div class="maincontent">
-                    <img src="/image/ttd/shopping/img/monas.jpg" alt="">
+                    <img src="/image/ttd/famous places/monas.jpg" alt="">
                     <h4></p>1. Monas </h4>                    
                 </a>
                 <div class="rating">
@@ -135,7 +134,7 @@
 
             <div class="maincontent">
                 <a href="gatotkaca" target="_blank" rel="noopener noreferrer">
-                    <img src="/image/ttd/shopping/gatotkaca.jpg" alt="">
+                    <img src="/image/ttd/famous places/gatotkaca.jpg" alt="">
                     <h4>2. Satria Gatotkaca Statue</h4>                      
                 </a>
                 <div class="rating">
@@ -148,7 +147,7 @@
 
             <div class="maincontent">
                 <a href="yogya" target="_blank" rel="noopener noreferrer">
-                    <img src="/image/ttd/shopping/yogyamonument.jpg" alt="">
+                    <img src="/image/ttd/famous places/yogyamonument.jpg" alt="">
                     <h4>3. Yogyakarta Monument</h4>                      
                 </a>
                 <div class="rating">
@@ -160,10 +159,9 @@
             </div>
         </div>
     </div>
-
-
-    <%- include('../layout/footer.ejs'); %>
+</div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-
+    <%- include('../layout/footer.ejs'); %>
   </body>
 </html>
