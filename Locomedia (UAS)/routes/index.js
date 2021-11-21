@@ -2,7 +2,10 @@ const express = require('express');
 const { Result } = require('express-validator');
 const City = require('../model/city')
 
+const methodOverride = require('method-override');
 const router = express.Router()
+
+router.use(methodOverride("_method"));
 
 router.get('/', (req, res) => {
     res.render('pages/index');
@@ -27,7 +30,10 @@ router.post('/search', (req, res) =>{
 
 router.get('/admin', async(req, res) => {
     var cityData = await City.find();
-    res.render('pages/admin', {cities: cityData});
+
+    res.render('pages/admin', {
+        cities: cityData,
+    });
 })
 
 router.post('/admin', async(req, res) =>{
@@ -45,12 +51,6 @@ router.post('/admin', async(req, res) =>{
     }
 })
 
-router.delete('/admin', (req, res) => {
-    City.findByIdAndDelete(req.body.id).then((result) => {
-        res.redirect('/admin');
-    });
-})
-
 router.get('/admin-update/:id', async(req, res) =>{
     const city = await City.findById(req.params.id);
     var cityData = await City.find();
@@ -58,6 +58,20 @@ router.get('/admin-update/:id', async(req, res) =>{
     res.render('pages/admin-update', {
         city,
         cities: cityData,
+    });
+})
+
+router.get('/admin-delete/:id', async(req, res) =>{
+    const city = await City.findById(req.params.id);
+    var cityData = await City.find();
+
+    res.render('pages/admin-delete', {
+        city,
+        cities: cityData,
+    });
+
+    City.findByIdAndDelete(req.params.id).then((result) => {
+        res.redirect('/admin');
     });
 })
 

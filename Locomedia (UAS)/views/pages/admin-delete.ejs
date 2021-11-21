@@ -46,8 +46,8 @@
                     </tbody>
                   </table>
 
-                  <h3 style="text-align: center; margin-top: 3%;">Edit the data</h3>
-                  <form method="POST" action="/admin-update/cityUpdate">
+                  <h3 style="text-align: center; margin-top: 3%;">Delete this data?</h3>
+                  <form method="POST" action="/admin-update/cityDelete">
                   <table class="table" style="margin-top: 1%;">
                     <thead>
                       <tr>
@@ -60,10 +60,10 @@
                     <tbody>
                       <tr>
                         <input type="hidden" name="_id" value="<%=city._id%>">
-                        <td><input name="link" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Page's link" value="<%= city.link %>"></td>
-                        <td><input name="imagePath" type="text" class="form-control" id="exampleInputPassword1" placeholder="Image's link" value="<%= city.imagePath %>"></td>
-                        <td><input name="name" type="text" class="form-control" id="exampleInputPassword1" placeholder="City's name" value="<%= city.name %>"></td>
-                        <td><input name="location" type="text" class="form-control" id="exampleInputPassword1" placeholder="City's location" value="<%= city.location %>"></td>
+                        <td><%= city.link %></td>
+                        <td><%= city.imagePath %></td>
+                        <td><%= city.name %></td>
+                        <td><%= city.location %></td>
                       </tr>
                     </tbody>
                   </table>
