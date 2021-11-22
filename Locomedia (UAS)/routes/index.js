@@ -143,6 +143,10 @@ router.get('/papua', (req, res) => {
     res.render('pages/papua');
 })
 
+router.get('/makanan', (req, res) => {
+    res.render('pages/makanan');
+})
+
 router.get('/ttd', async(req, res) => {
     var cityData = await City.find();
     res.render('pages/ttd', {cities: cityData});

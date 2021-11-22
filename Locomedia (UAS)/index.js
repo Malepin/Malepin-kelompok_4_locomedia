@@ -30,17 +30,6 @@ mongoose.connect(('mongodb+srv://Mathew:gesFd1Q0PI9u0hjb@locomedia.fe0cl.mongodb
     }
 })
 
-const database = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/locomedia';
-
-mongoose.connect(database, {
-    useUnifiedTopology: true,
-    useNewURLParser:true,
-});
-
-mongoose.connection.on("connected", ()=> {
-    console.log(`${database} terkoneksi....`);
-});
-
 // SEDDING
 
 const indexRouter = require('./routes/index');
