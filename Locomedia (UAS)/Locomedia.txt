@@ -1,0 +1,19 @@
+Nama anggota kelompok :
+535200060 Melvin Pramudita
+535200061 Anthony Alvin
+535200084 Zendi Ibrahim
+535200047 Mathew Judianto
+535200046 Raihan Tara
+
+Link Github :
+https://github.com/Malepin/Malepin-kelompok_4_locomedia/tree/master/Locomedia%20(UAS)
+
+Link Live Apps :
+https://locomedia.herokuapp.com/
+
+Link Demo Apps :
+https://youtu.be/swL8-nICvGQ
+
+Informasi Login Ke Aplikasi :
+Email	: mathew@gmail.com
+Password	: 123
