@@ -1,14 +1,13 @@
 const express = require('express');
 const { Result } = require('express-validator');
 const City = require('../model/city')
+const Article = require('../model/article')
 
-const methodOverride = require('method-override');
 const router = express.Router()
 
-router.use(methodOverride("_method"));
-
-router.get('/', (req, res) => {
-    res.render('pages/index');
+router.get('/', async(req, res) => {
+    var articleData = await Article.find()
+    res.render('pages/index', {articles: articleData});
 })
 
 router.post('/', (req, res) =>{
@@ -30,9 +29,11 @@ router.post('/search', (req, res) =>{
 
 router.get('/admin', async(req, res) => {
     var cityData = await City.find();
+    var articleData = await Article.find();
 
     res.render('pages/admin', {
         cities: cityData,
+        articles: articleData,
     });
 })
 
@@ -41,7 +42,12 @@ router.post('/admin', async(req, res) =>{
     const password = req.body.password;
 
     var cityData = await City.find();
-    res.render('pages/admin', {cities: cityData});
+    var articleData = await Article.find();
+
+    res.render('pages/admin', {
+        cities: cityData,
+        articles: articleData,
+    });
 
     if (email == "mathew@gmail.com" && password == "123"){
         req.session.isLoggedIn = true;
@@ -54,23 +60,55 @@ router.post('/admin', async(req, res) =>{
 router.get('/admin-update/:id', async(req, res) =>{
     const city = await City.findById(req.params.id);
     var cityData = await City.find();
+    var articleData = await Article.find();
 
     res.render('pages/admin-update', {
         city,
         cities: cityData,
+        articles: articleData,
+    });
+})
+
+router.get('/admin-update-article/:id', async(req, res) =>{
+    const article = await Article.findById(req.params.id);
+    var cityData = await City.find();
+    var articleData = await Article.find();
+
+    res.render('pages/admin-update-article', {
+        article,
+        cities: cityData,
+        articles: articleData,
     });
 })
 
 router.get('/admin-delete/:id', async(req, res) =>{
     const city = await City.findById(req.params.id);
     var cityData = await City.find();
+    var articleData = await Article.find();
 
     res.render('pages/admin-delete', {
         city,
         cities: cityData,
+        articles: articleData,
     });
 
     City.findByIdAndDelete(req.params.id).then((result) => {
+        res.redirect('/admin');
+    });
+})
+
+router.get('/admin-delete-article/:id', async(req, res) =>{
+    const article = await Article.findById(req.params.id);
+    var cityData = await City.find();
+    var articleData = await Article.find();
+
+    res.render('pages/admin-delete-article', {
+        article,
+        cities: cityData,
+        articles: articleData,
+    });
+
+    Article.findByIdAndDelete(req.params.id).then((result) => {
         res.redirect('/admin');
     });
 })
@@ -95,6 +133,10 @@ router.get('/sulawesi', (req, res) => {
 
 router.get('/kalimantan', (req, res) => {
     res.render('pages/kalimantan');
+})
+
+router.get('/review', (req, res) => {
+    res.render('pages/review');
 })
 
 router.get('/papua', (req, res) => {

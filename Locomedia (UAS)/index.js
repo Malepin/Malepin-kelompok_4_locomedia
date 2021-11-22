@@ -4,6 +4,8 @@ const session = require('express-session')
 const app = express()
 const mongoose = require('mongoose')
 
+const PORT = process.env.PORT || 3000;
+
 app.use(express.static('public'))
 app.set('view engine', 'ejs' )
 app.use(bodyparser.urlencoded({extended: false}))
@@ -27,6 +29,17 @@ mongoose.connect(('mongodb+srv://Mathew:gesFd1Q0PI9u0hjb@locomedia.fe0cl.mongodb
         console.log('Database terhubung untuk seeding');
     }
 })
+
+const database = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/locomedia';
+
+mongoose.connect(database, {
+    useUnifiedTopology: true,
+    useNewURLParser:true,
+});
+
+mongoose.connection.on("connected", ()=> {
+    console.log(`${database} terkoneksi....`);
+});
 
 // SEDDING
 
@@ -77,6 +90,6 @@ app.use('/', artikelRouter);
 app.use('/', adminRouter);
 
 
-app.listen(3000, ()=> {
+app.listen(PORT, ()=> {
     console.log('Web berjalan pada server 3000')
 })
