@@ -135,6 +135,10 @@ router.get('/kalimantan', (req, res) => {
     res.render('pages/kalimantan');
 })
 
+router.get('/review', (req, res) => {
+    res.render('pages/review');
+})
+
 router.get('/papua', (req, res) => {
     res.render('pages/papua');
 })

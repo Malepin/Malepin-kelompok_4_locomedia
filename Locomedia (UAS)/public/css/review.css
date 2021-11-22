@@ -1,0 +1,48 @@
+.mainbox {
+    margin: 0 150px 4% 150px;
+    display: flex;
+}
+
+.maintitle {
+    margin: 10px 0 0 50px;
+}
+
+.reviewbox {
+    width: 100%;
+    padding:  0 10px 10px 10px;
+}
+
+.imagebox {
+    padding-top: 20px;
+}
+
+.submit {
+    justify-content: right;
+    border: solid rgba(128, 128, 128, 0.39);
+    border-radius: 10px;
+    max-width: 80px;
+    margin-left: 92%;
+}
+
+.submit .btn:hover {
+    background-color: black;
+    color: white;
+}
+
+.dtr {
+    display: flex;
+}
+
+.links {
+    width: 100%;
+    color: rgba(128, 128, 128, 0.644);
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.dtr img{
+    width: 200px;
+    height: 200px;
+}
