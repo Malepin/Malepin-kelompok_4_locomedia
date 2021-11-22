@@ -60,23 +60,55 @@ router.post('/admin', async(req, res) =>{
 router.get('/admin-update/:id', async(req, res) =>{
     const city = await City.findById(req.params.id);
     var cityData = await City.find();
+    var articleData = await Article.find();
 
     res.render('pages/admin-update', {
         city,
         cities: cityData,
+        articles: articleData,
+    });
+})
+
+router.get('/admin-update-article/:id', async(req, res) =>{
+    const article = await Article.findById(req.params.id);
+    var cityData = await City.find();
+    var articleData = await Article.find();
+
+    res.render('pages/admin-update-article', {
+        article,
+        cities: cityData,
+        articles: articleData,
     });
 })
 
 router.get('/admin-delete/:id', async(req, res) =>{
     const city = await City.findById(req.params.id);
     var cityData = await City.find();
+    var articleData = await Article.find();
 
     res.render('pages/admin-delete', {
         city,
         cities: cityData,
+        articles: articleData,
     });
 
     City.findByIdAndDelete(req.params.id).then((result) => {
+        res.redirect('/admin');
+    });
+})
+
+router.get('/admin-delete-article/:id', async(req, res) =>{
+    const article = await Article.findById(req.params.id);
+    var cityData = await City.find();
+    var articleData = await Article.find();
+
+    res.render('pages/admin-delete-article', {
+        article,
+        cities: cityData,
+        articles: articleData,
+    });
+
+    Article.findByIdAndDelete(req.params.id).then((result) => {
         res.redirect('/admin');
     });
 })
